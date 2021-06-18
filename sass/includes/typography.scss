@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+:root {
+  --ft-fy-Montserrat: "Montserrat", sans-serif;
+  --wt-light: 300;
+  --wt-regular: 400;
+  --wt-medium: 500;
+  --wt-semi-bold: 600;
+  --wt-bold: 700;
+  --wt-extra-bold: 800;
+  --wt-black: 900;
+}
+$ft-fy-Montserrat: var(--ft-fy-Montserrat);
+$wt-light: var(--wt-light);
+$wt-regular: var(--wt-regular);
+$wt-medium: var(--wt-medium);
+$wt-semi-bold: var(--wt-semi-bold);
+$wt-bold: var(--wt-bold);
+$wt-extra-bold: var(--wt-extra-bold);
+$wt-black: var(--wt-black);
