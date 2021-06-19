@@ -1,27 +1,4 @@
 :root {
-  --black: #131313;
-  --black0: #000;
-  --black-d: #0d0d0d;
-  --black-20: rgba(0, 0, 0, 0.2);
-  --gray: #fafafa;
-  --yellow: #ffc000;
-  --black-50: rgba(0, 0, 0, 0.5);
-  --black-05: rgba(0, 0, 0, 0.05);
-  --and-gray: #e5e5e5;
-  --white: #fff;
-  --ink-color1: #0c0926;
-  --ink-color2: #0f0d2b;
+  --white: #ffffff;
 }
-
-$black: var(--black);
-$black0: var(--black0);
-$black-20: var(--black-20);
-$gray: var(--gray);
-$yellow: var(--yellow);
-$black-50: var(--black-50);
-$black-05: var(--black-05);
-$and-gray: var(--and-gray);
 $white: var(--white);
-$ink-color1: var(--ink-color1);
-$ink-color2: var(--ink-color2);
-$black-d: var(--black-d);

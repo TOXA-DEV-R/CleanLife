@@ -1,19 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-:root {
-  --ft-fy-Montserrat: "Montserrat", sans-serif;
-  --wt-light: 300;
-  --wt-regular: 400;
-  --wt-medium: 500;
-  --wt-semi-bold: 600;
-  --wt-bold: 700;
-  --wt-extra-bold: 800;
-  --wt-black: 900;
+@font-face {
+  font-family: "gilroy-light";
+  src: url("../../fonts/Gilroy-Light.ttf");
+  font-weight: 300;
 }
-$ft-fy-Montserrat: var(--ft-fy-Montserrat);
-$wt-light: var(--wt-light);
-$wt-regular: var(--wt-regular);
-$wt-medium: var(--wt-medium);
-$wt-semi-bold: var(--wt-semi-bold);
-$wt-bold: var(--wt-bold);
-$wt-extra-bold: var(--wt-extra-bold);
-$wt-black: var(--wt-black);
+@font-face {
+  font-family: "gilroy-regular";
+  src: url("../../fonts/Gilroy-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "gilroy-medium";
+  src: url("../../fonts/Gilroy-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "gilroy-bold";
+  src: url("../../fonts/Gilroy-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "gilroy-heavy";
+  src: url("../../fonts/Gilroy-Heavy.ttf");
+  font-weight: 800;
+}
+
+:root {
+  --gilroy-light: "gilroy-light", sans-serif;
+  --gilroy-regular: "gilroy-regular", sans-serif;
+  --gilroy-medium: "gilroy-medium", sans-serif;
+  --gilroy-bold: "gilroy-bold", sans-serif;
+  --gilroy-heavy: "gilroy-heavy", sans-serif;
+}
+
+$gilroy-light: var(--gilroy-light);
+$gilroy-regular: var(--gilroy-regular);
+$gilroy-medium: var(--gilroy-medium);
+$gilroy-bold: var(--gilroy-bold);
+$gilroy-heavy: var(--gilroy-heavy);
