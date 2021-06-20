@@ -428,11 +428,16 @@ header .header-bg {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .header-bg .img {
   max-width: 1920px;
-  margin: 0 auto;
   height: 100%;
 }
-header .header-bg img {
+header .header-bg .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -655,6 +660,331 @@ header .category-list__text p {
 
 /* / header*/
 /* main */
+/* sec-about */
+main .sec-about {
+  background: url("../../images/sec-about_bg.png") no-repeat center center/cover;
+}
+main .sec-about > .container > .row {
+  padding: 94px 0;
+}
+main .sec-about__left {
+  width: 632px;
+  height: 601px;
+}
+main .sec-about__left img {
+  width: 100%;
+  height: 100%;
+}
+main .sec-about__right {
+  width: 458px;
+}
+main .sec-about__right .title .mark-2 {
+  margin-top: 12px;
+  display: block;
+  width: 133px;
+  height: 2px;
+  background: #00ca2c;
+}
+main .sec-about__text {
+  margin-top: 20px;
+  font-family: var(--gilroy-bold);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 31px;
+  color: #696969;
+}
+main .sec-about__detailed {
+  font-family: var(--gilroy-bold);
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 5px;
+  color: #000000;
+}
+main .sec-about__detailed span {
+  font-weight: bold;
+  font-size: 51px;
+  line-height: 63px;
+  font-family: var(--gilroy-bold);
+  color: #00ca2c;
+}
+main .sec-about__link {
+  display: inline-block;
+  padding: 16px 47px;
+  margin-top: 35px;
+  font-family: var(--gilroy-medium);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  background: #00ca2c;
+  border-radius: 5px;
+}
+
+/* / sec-about */
+/* sec-service */
+main .sec-service > .container > .row {
+  position: relative;
+}
+main .sec-service > .container > .row::after {
+  content: "";
+  position: absolute;
+  top: 236px;
+  left: -285px;
+  display: block;
+  width: 581px;
+  height: 581px;
+  background: rgba(0, 176, 39, 0.1);
+  filter: blur(188px);
+}
+main .sec-service .title {
+  margin-top: 122px;
+  text-align: center;
+}
+main .sec-service__text {
+  width: 1095px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: var(--gilroy-regular);
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  color: #696969;
+}
+
+/* / sec-service */
+/* sec-facilities */
+main .sec-facilities {
+  margin-top: 84px;
+  height: 561px;
+  background: url("../../images/curtain-with-sunlight 1.jpg") no-repeat center center/cover;
+  position: relative;
+  z-index: 0;
+}
+main .sec-facilities .container > .row {
+  position: relative;
+  z-index: 10;
+}
+main .sec-facilities .title {
+  margin-top: 68px;
+  color: var(--white);
+}
+main .sec-facilities .title .mark-1 {
+  color: #00b027;
+}
+main .sec-facilities__text {
+  width: 462px;
+  margin-left: 74px;
+  margin-top: 77px;
+}
+main .sec-facilities__text p {
+  font-family: var(--gilroy-medium);
+  font-size: 20px;
+  line-height: 33px;
+  color: var(--white);
+}
+main .sec-facilities__img {
+  position: absolute;
+  top: 214px;
+  left: 442px;
+}
+
+/* / sec-facilities */
+/* sec-project */
+main .sec-project {
+  margin-top: 75px;
+  position: relative;
+}
+main .sec-project__images {
+  display: flex;
+}
+main .sec-project::after {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: -41px;
+  width: 581px;
+  height: 581px;
+  background: rgba(0, 176, 39, 0.1);
+  filter: blur(188px);
+  opacity: 0.58;
+  z-index: 1;
+}
+main .sec-project__img {
+  margin-top: 37px;
+  max-width: 601px;
+  height: 722px;
+  position: relative;
+}
+main .sec-project__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .sec-project__img .flat_view {
+  position: absolute;
+  bottom: 29px;
+  left: 31px;
+  padding: 22px 44px;
+  font-family: var(--gilroy-medium);
+  display: inline-block;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.42);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+/* / sec-project */
+/* sec-equipment */
+main .sec-equipment .title {
+  margin-top: 124px;
+}
+main .sec-equipment-text {
+  max-width: 680px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-family: var(--gilroy-medium);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 31px;
+  text-align: center;
+  color: #696969;
+}
+main .sec-equipment-img {
+  width: 279px;
+  height: 409px;
+  position: relative;
+  margin-top: 80px;
+}
+main .sec-equipment-img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+main .sec-equipment-img span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 256px;
+  height: 62px;
+  background: #00b027;
+  box-shadow: 0px 16px 32px rgba(0, 176, 39, 0.3);
+  border-radius: 10px;
+  font-family: var(--gilroy-bold);
+  color: var(--white);
+  font-weight: bold;
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  clip-path: polygon(0% 0%, 0 0, 100% 4%, 100% 96%, 0% 100%);
+  transform: translateY(28px);
+}
+
+/* / sec-equipment */
+/* sec-information */
+main .sec-information {
+  position: relative;
+}
+main .sec-information::after {
+  content: "";
+  position: absolute;
+  top: 229px;
+  left: -41px;
+  width: 581px;
+  height: 581px;
+  background: rgba(0, 176, 39, 0.1);
+  filter: blur(188px);
+  opacity: 0.58;
+  z-index: 1;
+}
+main .sec-information .title {
+  margin-top: 89px;
+}
+main .sec-information__left {
+  max-width: 697px;
+}
+main .sec-information__left h4 {
+  margin-top: 34px;
+  font-family: var(--gilroy-medium);
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+main .sec-information__left h4 + p {
+  margin-top: 14px;
+  font-family: var(--gilroy-medium);
+  font-size: 15px;
+  line-height: 31px;
+  color: #696969;
+}
+main .sec-information__right {
+  width: 440px;
+  height: 334px;
+  margin-top: 54px;
+}
+main .sec-information__right img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* / sec-information */
+/* sec-client */
+main .sec-client {
+  margin-top: 152px;
+}
+main .sec-client__commit {
+  margin-top: 25px;
+  font-family: var(--gilroy-regular);
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #00b027;
+}
+main .sec-client .card {
+  width: 365px;
+  margin-top: 42px;
+  padding: 24px 34px;
+  filter: drop-shadow(0px 4px 41px rgba(0, 176, 39, 0.11));
+}
+main .sec-client .card__text {
+  font-family: var(--gilroy-medium);
+  font-size: 15px;
+  line-height: 26px;
+  margin-top: 21px;
+  margin-bottom: 33px;
+}
+main .sec-client .card__bottom {
+  margin: 0 -34px;
+  padding: 21px 0 0 34px;
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+}
+main .sec-client .card .user {
+  margin-left: 14px;
+}
+main .sec-client .card .user__name {
+  font-family: var(--gilroy-bold);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #00187b;
+}
+main .sec-client .card .user__job {
+  font-family: var(--gilroy-medium);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+  color: #696969;
+}
+
+/* / sec-client */
 /* / main */
 html {
   font-size: 16px;
@@ -665,6 +995,72 @@ html {
   list-style: none;
   text-decoration: none;
   font-style: normal;
+}
+
+.title {
+  font-family: var(--gilroy-bold);
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 64px;
+  text-align: center;
+  color: #00187b;
+  display: flex;
+  flex-direction: column;
+}
+.title .mark-1 {
+  margin-bottom: 15px;
+  display: block;
+  font-family: var(--gilroy-bold);
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
+}
+
+.card {
+  margin-top: 48px;
+  width: 364px;
+  background: var(--white);
+  filter: drop-shadow(0px 4px 41px rgba(0, 176, 39, 0.11));
+}
+.card__img {
+  width: 100%;
+  height: 257px;
+  border-radius: 5px 5px 0px 0px;
+}
+.card__img img {
+  width: 100%;
+  height: 100%;
+}
+.card__body {
+  padding: 19px 24px;
+}
+.card__title {
+  font-family: var(--gilroy-bold);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #00187b;
+}
+.card__text {
+  margin-top: 14px;
+  font-family: var(--gilroy-medium);
+  font-size: 15px;
+  line-height: 26px;
+  color: #696969;
+}
+.card__link {
+  margin-top: 29px;
+  margin-bottom: 12px;
+  font-family: var(--gilroy-medium);
+  font-size: 16px;
+  line-height: 26px;
+  color: #00187b;
+  display: flex;
+  align-items: center;
+}
+.card__link svg {
+  margin-left: 19px;
 }
 
 /*# sourceMappingURL=base.css.map */
