@@ -6,3 +6,7 @@ if (document.querySelector(".my-slider")) {
     autoplay: true,
   });
 }
+
+// Dropdown menu
+
+const menuInitItem = document.querySelectorAll(".menu-init__item");

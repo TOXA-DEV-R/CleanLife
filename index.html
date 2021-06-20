@@ -29,11 +29,25 @@
                 </svg>
               </a>
               <ul class="menu-init">
-                <li class="menu-init__item"><a href="#!" class="menu-init__link">Услуги</a></li>
-                <li class="menu-init__item"><a href="#!" class="menu-init__link">Услуги</a></li>
+                <li class="menu-init__item"><a href="#!" class="menu-init__link">Уборка <svg width="6" height="11"
+                      viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a></li>
+                <li class="menu-init__item"><a href="#!" class="menu-init__link">Чистка Брусчатки И
+                    Фасадов <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a></li>
+                <li class="menu-init__item"><a href="#!" class="menu-init__link">Химчистка <svg width="6" height="11"
+                      viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a></li>
               </ul>
             </li>
-            <li class="menu__item"><a href="/" class="menu__link">Контакты</a></li>
+            <li class="menu__item"><a href="/" class="menu__link">Контакты </a></li>
           </ul>
           <div class="call-number">
             <p> <span>+998 (99) </span> 333-33-33</p>
@@ -47,8 +61,8 @@
 
             </a>
             <div class="lang__content">
-              <a href="/" class="lang__link">Rus</a>
-              <a href="/" class="lang__link">Uzb</a>
+              <a href="/" class="lang__link">Ру</a>
+              <a href="/" class="lang__link">Eng</a>
             </div>
           </div>
           <a href="#!" class="order">Заказать услуга</a>
@@ -329,7 +343,7 @@
     <!-- sec-client -->
     <section class="sec-client">
       <div class="container">
-        <div class="row">
+        <div class="row justify-between">
           <div class="col-12">
             <h4 class="title"><span class="mark-1"></span>Счастливый клиент говорит о
               Наша компания
@@ -415,6 +429,43 @@
       </div>
     </section>
     <!-- / sec-client -->
+    <!-- sec-order -->
+    <section class="sec-order">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="title"><span class="mark-1">Заказ</span>Заполните необходимые разделы, если хотите заказать
+            </h4>
+          </div>
+        </div>
+        <div class="row justify-between align-center">
+          <form class="sec-order__contact">
+            <input type="text" class="name" name="name" placeholder="Имя *">
+            <input type="text" class="number" name="number" placeholder="Телефон *">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle">
+                Выберите услугу * <svg width="9" height="5" viewBox="0 0 9 5" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.75 0.625L4.5 4.375L8.25 0.625" stroke="#B0B0B0" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="dropdown__menu">
+                <span class="dropdown__item">Уборка</span>
+                <span class="dropdown__item">Чистка Брусчатки И
+                  Фасадов</span>
+              </div>
+            </div>
+            <textarea name="textarea" class="textarea"></textarea>
+            <button type="submit" class="btn-submit">Отправить сообщение</button>
+          </form>
+          <div class="sec-order__img">
+            <img src="./images/welcome-sign_img.png" alt="Admin_img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / sec-order -->
   </main>
   <!-- / main -->
   <!-- footer -->
