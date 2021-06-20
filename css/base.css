@@ -694,6 +694,9 @@ main .sec-about__left img {
 main .sec-about__right {
   width: 458px;
 }
+main .sec-about__right .title {
+  text-align: start;
+}
 main .sec-about__right .title .mark-2 {
   margin-top: 12px;
   display: block;
@@ -779,6 +782,17 @@ main .sec-facilities {
 main .sec-facilities .container > .row {
   position: relative;
   z-index: 10;
+}
+main .sec-facilities::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b388f;
+  opacity: 0.55;
 }
 main .sec-facilities .title {
   margin-top: 68px;
@@ -954,6 +968,10 @@ main .sec-information__right img {
 main .sec-client {
   margin-top: 152px;
 }
+main .sec-client .title {
+  max-width: 735px;
+  margin: 0 auto;
+}
 main .sec-client__commit {
   margin-top: 25px;
   font-family: var(--gilroy-regular);
@@ -1003,6 +1021,8 @@ main .sec-client .card .user__job {
 /* / sec-client */
 /* sec-order */
 main .sec-order .title {
+  max-width: 1062px;
+  margin: 0 auto;
   margin-top: 101px;
 }
 main .sec-order__contact {
