@@ -131,5 +131,48 @@ if (document.querySelector("#sec-client-slider")) {
     nav: true,
   });
 }
+
+// header-fixed
+window.addEventListener("scroll", navbarAoutoControl);
+const navbar = document.querySelector("nav.navbar");
+const navbarFixed = document.querySelector("div.navbar-fixed");
+function navbarAoutoControl() {
+  if (window.pageYOffset < 500) {
+    navbarFixed.style.display = "none";
+  } else {
+    if (document.body.offsetWidth > 1200) {
+      navbarFixed.style.display = "block";
+    }
+  }
+}
+
+window.addEventListener("resize", navbarWidthResize);
+navbarWidthResize();
+function navbarWidthResize() {
+  if (document.body.offsetWidth < 1200) {
+    navbar.style.display = "none";
+    navbarFixed.style.display = "none";
+  } else {
+    navbar.style.display = "flex";
+    navbarFixed.style.display = "none";
+  }
+}
+// btnUp
+const btnUp = document.querySelector(".btn-up");
+btnUp.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+window.addEventListener("scroll", srollBtnUp);
+function srollBtnUp() {
+  if (window.pageYOffset < 500) {
+    btnUp.style.display = "none";
+  } else {
+    btnUp.style.display = "block";
+  }
+}
 // Dropdown menu
 const menuInitItem = document.querySelectorAll(".menu-init__item");
