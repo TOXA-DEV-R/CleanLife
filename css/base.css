@@ -829,8 +829,9 @@ main .sec-project {
   margin-top: 75px;
   position: relative;
 }
-main .sec-project__images {
-  display: flex;
+main .sec-project__image {
+  max-width: 1200px;
+  display: flex !important;
 }
 main .sec-project::after {
   content: "";
@@ -846,7 +847,7 @@ main .sec-project::after {
 }
 main .sec-project__img {
   margin-top: 37px;
-  max-width: 601px;
+  width: 50%;
   height: 722px;
   position: relative;
 }
@@ -868,6 +869,32 @@ main .sec-project__img .flat_view {
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
+}
+main .sec-project #sec-project__images {
+  display: flex;
+}
+main .sec-project .tns-outer {
+  position: relative;
+}
+main .sec-project .tns-outer .tns-controls {
+  position: absolute;
+  bottom: 29px;
+  right: 40px;
+  max-width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+main .sec-project .tns-outer .tns-controls button {
+  width: 71px;
+  height: 71px;
+  background: #00b027;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+main .sec-project .tns-outer .tns-controls button:first-of-type {
+  background-color: #2b388f;
+  margin-right: 8px;
 }
 
 /* / sec-project */
@@ -891,9 +918,10 @@ main .sec-equipment-img {
   height: 409px;
   position: relative;
   margin-top: 80px;
+  cursor: pointer;
 }
 main .sec-equipment-img img {
-  display: block;
+  display: inline-flex;
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
@@ -919,6 +947,39 @@ main .sec-equipment-img span {
   clip-path: polygon(0% 0%, 0 0, 100% 4%, 100% 96%, 0% 100%);
   transform: translateY(28px);
 }
+main .sec-equipment #sec-equipment-slider {
+  display: flex !important;
+}
+main .sec-equipment #sec-equipment-slider .sec-equipment__images {
+  display: flex !important;
+  height: 519px;
+}
+main .sec-equipment #sec-equipment-slider-ow {
+  position: relative;
+  z-index: 15;
+}
+main .sec-equipment #sec-equipment-slider-ow .tns-nav {
+  position: absolute;
+  bottom: -72px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .sec-equipment #sec-equipment-slider-ow .tns-nav button {
+  width: 30px;
+  height: 6px;
+  margin: 0 7px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: #dddddd;
+}
+main .sec-equipment #sec-equipment-slider-ow .tns-nav button.tns-nav-active, main .sec-equipment #sec-equipment-slider-ow .tns-nav button:hover {
+  background: #00b027;
+}
+main .sec-equipment #sec-equipment-slider-ow .tns-ovh {
+  margin-bottom: -50px;
+  padding-bottom: 50px;
+}
 
 /* / sec-equipment */
 /* sec-information */
@@ -938,7 +999,7 @@ main .sec-information::after {
   z-index: 1;
 }
 main .sec-information .title {
-  margin-top: 89px;
+  margin-top: 167px;
 }
 main .sec-information__left {
   max-width: 697px;
@@ -989,7 +1050,7 @@ main .sec-client .card {
   width: 365px;
   margin-top: 42px;
   padding: 24px 34px;
-  filter: drop-shadow(0px 4px 41px rgba(0, 176, 39, 0.11));
+  cursor: pointer;
 }
 main .sec-client .card__text {
   font-family: var(--gilroy-medium);
@@ -1022,13 +1083,46 @@ main .sec-client .card .user__job {
   line-height: 26px;
   color: #696969;
 }
+main .sec-client .tns-outer {
+  position: relative;
+  z-index: 15;
+}
+main .sec-client .tns-outer .tns-ovh {
+  margin: -26px -26px;
+  padding: 26px 26px;
+}
+main .sec-client .tns-outer .tns-ovh .sec-client-slider {
+  display: flex;
+}
+main .sec-client .tns-outer .tns-ovh .sec-client-slider__item {
+  display: flex !important;
+}
+main .sec-client .tns-outer .tns-nav {
+  position: absolute;
+  bottom: -64px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .sec-client .tns-outer .tns-nav button {
+  width: 30px;
+  height: 6px;
+  margin: 0 7px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: #dddddd;
+  transition: all 200ms ease-in-out;
+}
+main .sec-client .tns-outer .tns-nav button.tns-nav-active, main .sec-client .tns-outer .tns-nav button:hover {
+  background: #00b027;
+}
 
 /* / sec-client */
 /* sec-order */
 main .sec-order .title {
   max-width: 1062px;
   margin: 0 auto;
-  margin-top: 101px;
+  margin-top: 171px;
 }
 main .sec-order__contact {
   width: 570px;
@@ -1327,7 +1421,7 @@ html {
   margin-top: 48px;
   width: 364px;
   background: var(--white);
-  filter: drop-shadow(0px 4px 41px rgba(0, 176, 39, 0.11));
+  filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
 }
 .card__img {
   width: 100%;

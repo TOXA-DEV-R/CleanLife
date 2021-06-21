@@ -424,8 +424,9 @@ main .sec-facilities {
 /* sec-project */
 main .sec-project {
   margin-top: 75px;
-  &__images {
-    display: flex;
+  &__image {
+    max-width: 1200px;
+    display: flex !important;
   }
   position: relative;
   &::after {
@@ -442,7 +443,7 @@ main .sec-project {
   }
   &__img {
     margin-top: 37px;
-    max-width: 601px;
+    width: 50%;
     height: 722px;
     position: relative;
     img {
@@ -463,6 +464,32 @@ main .sec-project {
       font-size: 20px;
       line-height: 26px;
       text-transform: uppercase;
+    }
+  }
+  #sec-project__images {
+    display: flex;
+  }
+  .tns-outer {
+    position: relative;
+    .tns-controls {
+      position: absolute;
+      bottom: 29px;
+      right: 40px;
+      max-width: 150px;
+      display: flex;
+      justify-content: space-between;
+      button {
+        width: 71px;
+        height: 71px;
+        background: #00b027;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        &:first-of-type {
+          background-color: #2b388f;
+          margin-right: 8px;
+        }
+      }
     }
   }
 }
@@ -488,8 +515,9 @@ main .sec-equipment {
     height: 409px;
     position: relative;
     margin-top: 80px;
+    cursor: pointer;
     img {
-      display: block;
+      display: inline-flex;
       max-width: 100%;
       max-height: 100%;
       margin: 0 auto;
@@ -516,6 +544,40 @@ main .sec-equipment {
       transform: translateY(28px);
     }
   }
+  #sec-equipment-slider {
+    display: flex !important;
+    .sec-equipment__images {
+      display: flex !important;
+      height: 519px;
+    }
+  }
+  #sec-equipment-slider-ow {
+    position: relative;
+    z-index: 15;
+    .tns-nav {
+      position: absolute;
+      bottom: -72px;
+      left: 50%;
+      transform: translateX(-50%);
+      button {
+        width: 30px;
+        height: 6px;
+        margin: 0 7px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        background-color: #dddddd;
+        &.tns-nav-active,
+        &:hover {
+          background: #00b027;
+        }
+      }
+    }
+    .tns-ovh {
+      margin-bottom: -50px;
+      padding-bottom: 50px;
+    }
+  }
 }
 /* / sec-equipment */
 /* sec-information */
@@ -534,7 +596,7 @@ main .sec-information {
     z-index: 1;
   }
   .title {
-    margin-top: 89px;
+    margin-top: 167px;
   }
   &__left {
     max-width: 697px;
@@ -584,7 +646,7 @@ main .sec-client {
     width: 365px;
     margin-top: 42px;
     padding: 24px 34px;
-    filter: drop-shadow(0px 4px 41px rgba(0, 176, 39, 0.11));
+    cursor: pointer;
     &__text {
       font-family: $gilroy-medium;
       font-size: 15px;
@@ -617,6 +679,40 @@ main .sec-client {
       }
     }
   }
+  .tns-outer {
+    position: relative;
+    z-index: 15;
+    .tns-ovh {
+      margin: -26px -26px;
+      padding: 26px 26px;
+      .sec-client-slider {
+        display: flex;
+        &__item {
+          display: flex !important;
+        }
+      }
+    }
+    .tns-nav {
+      position: absolute;
+      bottom: -64px;
+      left: 50%;
+      transform: translateX(-50%);
+      button {
+        width: 30px;
+        height: 6px;
+        margin: 0 7px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        background-color: #dddddd;
+        transition: all 200ms ease-in-out;
+        &.tns-nav-active,
+        &:hover {
+          background: #00b027;
+        }
+      }
+    }
+  }
 }
 /* / sec-client */
 /* sec-order */
@@ -624,7 +720,7 @@ main .sec-order {
   .title {
     max-width: 1062px;
     margin: 0 auto;
-    margin-top: 101px;
+    margin-top: 171px;
   }
   &__contact {
     width: 570px;
