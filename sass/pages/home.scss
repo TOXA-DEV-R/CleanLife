@@ -115,7 +115,7 @@ header {
       }
     }
     .call-number {
-      margin-left: 73px;
+      margin-left: 70px;
       p {
         font-size: 22px;
         line-height: 27.5px;
@@ -130,7 +130,7 @@ header {
     }
     .lang__card {
       padding: 5px 0;
-      margin-left: 57px;
+      margin-left: 53px;
       position: relative;
       .lang-link-active {
         display: block;
@@ -186,7 +186,7 @@ header {
       color: $white;
       background: #00ca2c;
       border-radius: 5px;
-      margin-left: 56px;
+      margin-left: 53px;
     }
   }
   &::after {
@@ -415,23 +415,18 @@ main .sec-about {
 /* sec-service */
 main .sec-service {
   > .container {
+    position: relative;
+    height: 826px;
     > .row {
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 581px;
-        height: 581px;
-        background: rgba(0, 176, 39, 0.1);
-        filter: blur(188px);
-        transform: translate(-328px, 253px);
-      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
-
+  .card-cloumn {
+  }
   .title {
     margin-top: 122px;
     text-align: center;

@@ -177,5 +177,39 @@ function srollBtnUp() {
     btnUp.style.display = "block";
   }
 }
-// Dropdown menu
-const menuInitItem = document.querySelectorAll(".menu-init__item");
+
+// Read more card__btn
+if (document.querySelector(".card .card__btn")) {
+  const readMore = document.querySelectorAll(".card .card__btn");
+  const cardList = document.querySelectorAll(".card .card__list");
+  const card = document.querySelectorAll(".card");
+
+  readMore.forEach((item, index) => {
+    item.addEventListener("click", function () {
+      if (index === 0) {
+        cardList.forEach((itemList, indexInit) => {
+          if (index === indexInit) {
+            itemList.classList.toggle("active");
+            item.classList.toggle("active");
+          }
+        });
+      }
+      if (index === 1) {
+        cardList.forEach((itemList, indexInit) => {
+          if (index === indexInit) {
+            itemList.classList.toggle("active");
+            item.classList.toggle("active");
+          }
+        });
+      }
+      if (index === 2) {
+        cardList.forEach((itemList, indexInit) => {
+          if (index === indexInit) {
+            itemList.classList.toggle("active");
+            item.classList.toggle("active");
+          }
+        });
+      }
+    });
+  });
+}
