@@ -87,4 +87,8 @@ html {
   cursor: pointer;
   z-index: 999;
   outline: none;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    background: #2b388f;
+  }
 }

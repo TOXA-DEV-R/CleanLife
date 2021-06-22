@@ -26,60 +26,65 @@
   <!-- button-up -->
   <!-- header -->
   <header>
-    <div class="container">
-      <nav class="row navbar justify-between align-center">
-        <a href="/" class="col-auto brand-logo">
-          <img src="./images/icons/cleanlife.svg" alt="brand-logo">
-        </a>
-        <div class="col-auto heder-right">
-          <ul class="menu">
-            <li class="menu__item"><a href="/" class="menu__link">Главная</a></li>
-            <li class="menu__item"><a href="/" class="menu__link">О Нас</a></li>
-            <li class="menu__item"><a href="/" class="menu__link">Услуги
+    <div class="navbar">
+      <div class="container">
+        <nav class="row justify-between align-center">
+          <a href="/" class="col-auto brand-logo">
+            <img src="./images/icons/cleanlife.svg" alt="brand-logo">
+          </a>
+          <div class="col-auto heder-right">
+            <ul class="menu">
+              <li class="menu__item active"><a href="/" class="menu__link">Главная</a></li>
+              <li class="menu__item"><a href="/" class="menu__link">О Нас</a></li>
+              <li class="menu__item"><a href="/" class="menu__link">Услуги
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <ul class="menu-init">
+                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Уборка <svg width="6" height="11"
+                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a></li>
+                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Чистка Брусчатки И
+                      Фасадов <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a></li>
+                  <li class="menu-init__item"><a href="#!" class="menu-init__link">Химчистка <svg width="6" height="11"
+                        viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a href="/" class="menu__link">Контакты </a></li>
+            </ul>
+            <div class="call-number">
+              <p> <span>+998 (99) </span> 333-33-33</p>
+              <p> <span>+998 (99) </span> 333-33-33</p>
+            </div>
+            <div class="lang__card">
+              <a href="/" class="lang-link-active">Uz
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </a>
-              <ul class="menu-init">
-                <li class="menu-init__item"><a href="#!" class="menu-init__link">Уборка <svg width="6" height="11"
-                      viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </a></li>
-                <li class="menu-init__item"><a href="#!" class="menu-init__link">Чистка Брусчатки И
-                    Фасадов <svg width="6" height="11" viewBox="0 0 6 11" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </a></li>
-                <li class="menu-init__item"><a href="#!" class="menu-init__link">Химчистка <svg width="6" height="11"
-                      viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 10L5 5.5L1 1" stroke="#515151" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </a></li>
-              </ul>
-            </li>
-            <li class="menu__item"><a href="/" class="menu__link">Контакты </a></li>
-          </ul>
-          <div class="call-number">
-            <p> <span>+998 (99) </span> 333-33-33</p>
-            <p> <span>+998 (99) </span> 333-33-33</p>
-          </div>
-          <div class="lang__card">
-            <a href="/" class="lang-link-active">Uz
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
 
-            </a>
-            <div class="lang__content">
-              <a href="/" class="lang__link">Ру</a>
-              <a href="/" class="lang__link">Eng</a>
+              </a>
+              <div class="lang__content">
+                <a href="/" class="lang__link">Ру</a>
+                <a href="/" class="lang__link">Eng</a>
+              </div>
             </div>
+            <a href="#!" class="order">Заказать услуга</a>
           </div>
-          <a href="#!" class="order">Заказать услуга</a>
-        </div>
-      </nav>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
       <div class="navbar-fixed">
         <nav class="row justify-between align-center">
           <a href="/" class="col-auto brand-logo">
@@ -381,27 +386,39 @@
         </div>
         <div id="sec-equipment-slider">
           <div class="sec-equipment-img">
-            <img src="./images/machine_img_01.png" style="margin-left:30px;" alt="Мойка высокого давления">
+            <div class="img">
+              <img src="./images/machine_img_01.png" alt="Мойка высокого давления">
+            </div>
             <span>Мойка высокого давления</span>
           </div>
           <div class="sec-equipment-img">
-            <img src="./images/machine_img_02.png" style="margin-left: 23px;" alt="Роторная машина">
+            <div class="img">
+              <img src="./images/machine_img_02.png" alt="Роторная машина">
+            </div>
             <span>Роторная машина </span>
           </div>
           <div class="sec-equipment-img">
-            <img src="./images/machine_img_03.png" style="margin-left: 14px;" alt="Плысос для стирки ковров">
+            <div class="img">
+              <img src="./images/machine_img_03.png" alt="Плысос для стирки ковров">
+            </div>
             <span>Плысос для стирки ковров</span>
           </div>
           <div class="sec-equipment-img">
-            <img src="./images/machine_img_01.png" style="margin-left:30px;" alt="Мойка высокого давления">
+            <div class="img">
+              <img src="./images/machine_img_01.png" alt="Мойка высокого давления">
+            </div>
             <span>Мойка высокого давления</span>
           </div>
           <div class="sec-equipment-img">
-            <img src="./images/machine_img_02.png" style="margin-left: 23px;" alt="Роторная машина">
+            <div class="img">
+              <img src="./images/machine_img_02.png" alt="Роторная машина">
+            </div>
             <span>Роторная машина </span>
           </div>
           <div class="sec-equipment-img">
-            <img src="./images/machine_img_03.png" style="margin-left: 14px;" alt="Плысос для стирки ковров">
+            <div class="img">
+              <img src="./images/machine_img_03.png" alt="Плысос для стирки ковров">
+            </div>
             <span>Плысос для стирки ковров</span>
           </div>
         </div>
@@ -635,21 +652,15 @@
           <form class="sec-order__contact">
             <input type="text" class="name" name="name" placeholder="Имя *">
             <input type="text" class="number" name="number" placeholder="Телефон *">
-            <div class="dropdown">
-              <button class="btn dropdown-toggle">
-                Выберите услугу * <svg width="9" height="5" viewBox="0 0 9 5" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.75 0.625L4.5 4.375L8.25 0.625" stroke="#B0B0B0" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </button>
-              <div class="dropdown__menu">
-                <span class="dropdown__item">Уборка</span>
-                <span class="dropdown__item">Чистка Брусчатки И
-                  Фасадов</span>
-              </div>
-            </div>
-            <textarea name="textarea" class="textarea"></textarea>
+            <select name="select" class="select">
+              <option value="services-add">Выберите услугу *</option>
+              <option value="cleaning">Уборка</option>
+              <option value="facade-cleaning">Чистка Брусчатки И
+                Фасадов</option>
+              <option value="dry-cleaning">Химчистка</option>
+            </select>
+
+            <textarea name="textarea" class="textarea" placeholder="Текстовое сообщение"></textarea>
             <button type="submit" class="btn-submit">Отправить сообщение</button>
           </form>
           <div class="sec-order__img">
@@ -692,41 +703,51 @@
             <h3 class="footer-title">Лучшие услуги</h3>
             <li class="footer-services__item">
               <a href="#" class="footer-services__link">
-                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
                 Уборка дома
               </a>
             </li>
             <li class="footer-services__item">
               <a href="#" class="footer-services__link">
-                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
                 Уборка офиса
               </a>
             </li>
             <li class="footer-services__item">
               <a href="#" class="footer-services__link">
-                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
                 Чистка ковров
               </a>
             </li>
             <li class="footer-services__item">
               <a href="#" class="footer-services__link">
-                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
                 Очистка стекла
               </a>
             </li>
             <li class="footer-services__item">
               <a href="#" class="footer-services__link">
-                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+                <span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10L6 5.5L1 1" stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
                 Уборка кухни
               </a>
             </li>
@@ -741,7 +762,11 @@
                     stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 +998 (99) 333 33 33,</span> <span>
-                +998 (33) 999 99 99</span>
+                <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.6014 9.70339V11.4534C12.6021 11.6158 12.5688 11.7767 12.5037 11.9255C12.4386 12.0744 12.3432 12.208 12.2234 12.3178C12.1037 12.4276 11.9624 12.5113 11.8085 12.5633C11.6546 12.6153 11.4915 12.6347 11.3297 12.6201C9.53472 12.425 7.81048 11.8116 6.29557 10.8292C4.88613 9.93361 3.69118 8.73866 2.79557 7.32922C1.80972 5.80743 1.19621 4.0748 1.00473 2.27172C0.990158 2.11041 1.00933 1.94783 1.06103 1.79434C1.11272 1.64084 1.19582 1.49979 1.30501 1.38017C1.41421 1.26055 1.54712 1.16497 1.69528 1.09953C1.84344 1.03409 2.0036 1.00021 2.16557 1.00006H3.91557C4.19866 0.99727 4.47311 1.09752 4.68776 1.28212C4.90241 1.46672 5.04261 1.72307 5.08223 2.00339C5.1561 2.56343 5.29308 3.11331 5.49057 3.64256C5.56905 3.85135 5.58604 4.07826 5.53951 4.2964C5.49299 4.51455 5.38491 4.71479 5.22807 4.87339L4.48724 5.61422C5.31764 7.07462 6.52683 8.28382 7.98724 9.11422L8.72807 8.37339C8.88667 8.21655 9.08691 8.10847 9.30505 8.06194C9.5232 8.01542 9.75011 8.03241 9.9589 8.11089C10.4881 8.30838 11.038 8.44536 11.5981 8.51922C11.8814 8.5592 12.1402 8.70193 12.3252 8.92026C12.5102 9.1386 12.6085 9.41731 12.6014 9.70339Z"
+                      stroke="#00B027" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span> +998 (33) 999 99 99</span>
             </p>
             <span class="footer-contact__message"><svg width="15" height="11" viewBox="0 0 15 11" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -768,15 +793,13 @@
                     stroke-linejoin="round" />
                 </svg>
               </button>
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Copyright @ CleanLife.uz | 2021</p>
+      <p>Copyright Разработчик @parmonov98 | 2021</p>
     </div>
   </footer>
   <!-- / footer -->

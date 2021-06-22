@@ -134,7 +134,7 @@ if (document.querySelector("#sec-client-slider")) {
 
 // header-fixed
 window.addEventListener("scroll", navbarAoutoControl);
-const navbar = document.querySelector("nav.navbar");
+const navbar = document.querySelector(".navbar");
 const navbarFixed = document.querySelector("div.navbar-fixed");
 function navbarAoutoControl() {
   if (window.pageYOffset < 500) {
@@ -147,14 +147,17 @@ function navbarAoutoControl() {
 }
 
 window.addEventListener("resize", navbarWidthResize);
+const navbarMobil = document.querySelector(".navbar-mobil");
 navbarWidthResize();
 function navbarWidthResize() {
   if (document.body.offsetWidth < 1200) {
     navbar.style.display = "none";
     navbarFixed.style.display = "none";
+    navbarMobil.style.display = "block";
   } else {
     navbar.style.display = "flex";
     navbarFixed.style.display = "none";
+    navbarMobil.style.display = "none";
   }
 }
 // btnUp
