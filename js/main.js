@@ -169,6 +169,7 @@ btnUp.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
 window.addEventListener("scroll", srollBtnUp);
 function srollBtnUp() {
   if (window.pageYOffset < 500) {
@@ -212,4 +213,43 @@ if (document.querySelector(".card .card__btn")) {
       }
     });
   });
+}
+
+// navbar-mobil btn-toggol
+const btnToggl = document.querySelector(".navbar-mobil .btn-toggol");
+const bars = document.querySelector(".navbar-mobil .btn-toggol i");
+const navbarMobilNavbar = document.querySelector(
+  ".navbar-mobil .navbar-mobil__navbar"
+);
+btnToggl.addEventListener("click", () => {
+  if (bars.classList.contains("fa-bars")) {
+    bars.classList.remove("fa-bars");
+    bars.classList.add("fa-times");
+    navbarMobilNavbar.classList.add("active");
+  } else {
+    bars.classList.remove("fa-times");
+    bars.classList.add("fa-bars");
+    navbarMobilNavbar.classList.remove("active");
+  }
+});
+
+// navbar-fixed Auto
+window.addEventListener("scroll", navbarFixedAuto);
+const firstBarndLogo = "./images/icons/cleanlife.svg";
+const secondBarndLogo = "./images/icons/brand_logo.svg";
+
+function navbarFixedAuto() {
+  const navbarFixedMobil = document.querySelector(".navbar-mobil");
+  const brandLogo = document.querySelector(".navbar .brand-logo img");
+  if (window.pageYOffset > 500) {
+    navbarFixedMobil.classList.add("navbar-mobil-active");
+    // bars.classList.add("fa-bars");
+    // bars.classList.remove("fa-times");
+    brandLogo.src = secondBarndLogo;
+    console.log(brandLogo);
+    navbarMobilNavbar.classList.remove("active");
+  } else {
+    brandLogo.src = firstBarndLogo;
+    navbarFixedMobil.classList.remove("navbar-mobil-active");
+  }
 }

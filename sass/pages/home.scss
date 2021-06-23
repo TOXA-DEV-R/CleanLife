@@ -64,6 +64,7 @@ header {
         }
         &:nth-of-type(3) {
           position: relative;
+          z-index: 20;
           a {
             display: flex;
             align-items: center;
@@ -163,6 +164,7 @@ header {
         transform: translateY(5px);
         background: $white;
         border-radius: 10px;
+        overflow: hidden;
         a {
           display: block;
           padding-top: 4px;
@@ -173,9 +175,12 @@ header {
           line-height: 24px;
           color: #7e7e7e;
           font-family: $gilroy-medium;
-          border-bottom: 1px solid #ebebeb;
-          &:last-of-type {
-            border: none;
+          border-bottom: 1px solid #00ca2c00;
+          background: $white;
+          transition: var(--transition-all);
+          &:hover {
+            border-color: #00ca2c;
+            background: #f5f5f5;
           }
         }
       }
@@ -190,6 +195,10 @@ header {
       background: #00ca2c;
       border-radius: 5px;
       margin-left: 53px;
+      transition: var(--transition-all);
+      &:hover {
+        background: #2b388f;
+      }
     }
   }
   &::after {
@@ -328,9 +337,15 @@ header {
     }
   }
   .navbar-mobil {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    background: $white;
     z-index: 999;
-    .menu {
+    &__menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -341,10 +356,67 @@ header {
         outline: none;
         .fas {
           font-size: 25px;
-          color: $white;
+          color: var(--black);
         }
       }
     }
+    &__navbar {
+      display: none;
+      .heder-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          &__item {
+            margin-right: 0;
+            &:nth-of-type(3) {
+              a {
+                svg {
+                  path {
+                    stroke: var(--black);
+                  }
+                }
+              }
+            }
+          }
+          &__link {
+            color: var(--black);
+          }
+        }
+        .call-number {
+          margin: 10px 0;
+          p {
+            color: var(--black);
+          }
+        }
+        .lang__card {
+          margin: 10px 0;
+          .lang-link-active {
+            color: var(--black);
+            border-color: var(--black);
+          }
+          svg {
+            path {
+              stroke: var(--black);
+            }
+          }
+        }
+        .order {
+          margin: 10px 0;
+          // color: var(--black);
+          // background: $white;
+        }
+      }
+      &.active {
+        display: flex;
+      }
+    }
+  }
+  .navbar-mobil-active {
+    position: fixed;
+    background: #00b027;
   }
 }
 /* / header*/
@@ -435,7 +507,7 @@ main .sec-service {
     text-align: center;
   }
   &__text {
-    width: 1095px;
+    max-width: 1095px;
     margin: 0 auto;
     margin-top: 20px;
     font-family: $gilroy-regular;
@@ -453,6 +525,7 @@ main .sec-facilities {
   background: url("../../images/curtain-with-sunlight\ 1.jpg") no-repeat center
     center / cover;
   position: relative;
+  overflow: hidden;
   z-index: 0;
   .container {
     > .row {
@@ -643,7 +716,7 @@ main .sec-equipment {
     }
     .tns-nav {
       position: absolute;
-      bottom: -20px;
+      bottom: 6px;
       left: 50%;
       transform: translateX(-50%);
       button {
@@ -661,14 +734,18 @@ main .sec-equipment {
       }
     }
     .tns-ovh {
-      margin: -50px;
-      padding: 50px;
+      margin: 0 -52px;
+      padding: 0 52px;
+      .tns-item {
+        margin-bottom: 74px;
+      }
     }
   }
 }
 /* / sec-equipment */
 /* sec-information */
 main .sec-information {
+  margin-top: 89px;
   position: relative;
   > .container {
     > .row + .row {
@@ -690,7 +767,6 @@ main .sec-information {
   }
 
   .title {
-    margin-top: 167px;
   }
   &__left {
     max-width: 697px;
@@ -1115,13 +1191,19 @@ footer {
 }
 /* / footer */
 /* / main */
-@media screen and(max-width:1320px) {
+@media screen and(max-width:1319px) {
   header {
     height: unset;
     .navbar {
       justify-content: center;
+      > .container {
+        > .row {
+          justify-content: center;
+        }
+      }
       .brand-logo {
         margin-bottom: 29px;
+        padding: 0 20px;
       }
     }
     .category {
@@ -1135,9 +1217,23 @@ footer {
       }
     }
   }
+  /* .sec-facilities */
+  main .sec-facilities {
+    &__img {
+      left: 383px;
+    }
+  }
+  /*/ .sec-facilities */
 }
 
 @media screen and(max-width:1200px) {
+  /* .navbar-mobil */
+  header {
+    .navbar-mobil {
+    }
+  }
+  /* / .navbar-mobil */
+
   .category {
     #customize-thumbnails {
       justify-content: space-around !important;
