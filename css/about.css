@@ -101,6 +101,7 @@ main .about-our-card:hover .about-our-card__body p {
 .about-info__text img {
   width: 31px;
   height: 31px;
+  margin-right: 15px;
 }
 .about-info__text p {
   margin-top: 4px;

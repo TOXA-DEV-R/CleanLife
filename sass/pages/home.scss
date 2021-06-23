@@ -48,12 +48,15 @@ header {
           width: 26px;
           height: 2px;
           background: #00ca2c00;
+          transform: translateX(50px);
+          transition: var(--transition-all);
         }
         &:hover,
         &.active {
           &::after {
             content: "";
             background: #00ca2c;
+            transform: translateX(0);
           }
         }
         &:last-of-type {
@@ -569,6 +572,7 @@ main .sec-project {
 /* / sec-project */
 /* sec-equipment */
 main .sec-equipment {
+  overflow: hidden;
   .title {
     margin-top: 124px;
   }
@@ -720,6 +724,7 @@ main .sec-information {
 /* sec-client */
 main .sec-client {
   margin-top: 152px;
+  overflow: hidden;
   .title {
     max-width: 735px;
     margin: 0 auto;
@@ -796,6 +801,7 @@ main .sec-client {
         outline: none;
         background-color: #dddddd;
         transition: all 200ms ease-in-out;
+        cursor: pointer;
         &.tns-nav-active,
         &:hover {
           background: #00b027;
@@ -905,6 +911,10 @@ main .sec-order {
       border: none;
       cursor: pointer;
       outline: none;
+      transition: var(--transition-all);
+      &:hover {
+        background: #2b388f;
+      }
     }
   }
   &__img {
@@ -933,7 +943,6 @@ footer {
         width: 28px;
         height: 28px;
         margin-left: 11px;
-        background-color: $white;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -977,20 +986,24 @@ footer {
       max-width: 184px;
       padding: 0;
       &__item {
-        line-height: 40px;
+        // line-height: 40px;
         &:first-of-type {
           margin-top: 19px;
         }
       }
       &__link {
-        font-family: $gilroy-medium;
-        font-size: 16px;
-        color: #cbcbcb;
         display: flex;
         align-items: center;
+        del {
+          font-family: $gilroy-medium;
+          font-size: 16px;
+          line-height: 40px;
+          color: #cbcbcb;
+        }
         span {
-          display: inline-block;
+          display: inline-flex;
           width: 21px;
+          height: 11px;
           svg {
             margin-right: 14px;
             margin-left: 0;
@@ -1059,6 +1072,12 @@ footer {
           width: 100%;
           padding: 16px 54px 16px 19px;
           outline: none;
+          border: none;
+          font-family: $gilroy-medium;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #9c9c9c;
           &::placeholder {
             font-family: $gilroy-medium;
             font-weight: 500;
@@ -1075,6 +1094,9 @@ footer {
           height: 100%;
           background-color: #00b027;
           border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           cursor: pointer;
         }
       }
