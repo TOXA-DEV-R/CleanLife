@@ -457,11 +457,14 @@ main .sec-about {
     }
   }
   &__left {
-    width: 632px;
-    height: 601px;
+    max-width: 632px;
+    width: 100%;
+    max-height: 601px;
+    width: 100%;
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
   }
   &__right {
@@ -500,13 +503,14 @@ main .sec-about {
     }
   }
   &__link {
-    display: inline-block;
-    padding: 16px 47px;
+    display: block;
+    width: 180px;
+    height: 50px;
     margin-top: 35px;
     font-family: $gilroy-medium;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 50px;
     color: #ffffff;
     background: #00ca2c;
     border-radius: 5px;
@@ -538,22 +542,23 @@ main .sec-service {
     text-align: center;
   }
   &__text {
-    max-width: 1095px;
+    max-width: 1125px;
     margin: 0 auto;
     margin-top: 20px;
+    padding: 0 15px;
     font-family: $gilroy-regular;
     font-size: 15px;
     line-height: 26px;
     text-align: center;
     color: #696969;
   }
-  // .card {
-  //   filter: drop-shadow(0px 0px 0 rgba(0, 176, 39, 0));
-  //   transition: var(--transition-all);
-  //   &:hover {
-  //     filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
-  //   }
-  // }
+  .card {
+    filter: drop-shadow(0px 0px 0 rgba(0, 176, 39, 0));
+    transition: var(--transition-all);
+    &:hover {
+      filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
+    }
+  }
 }
 /* / sec-service */
 /* sec-facilities */
@@ -618,7 +623,8 @@ main .sec-project {
   &__img {
     margin-top: 37px;
     width: 50%;
-    height: 722px;
+    max-height: 722px;
+    height: 100%;
     position: relative;
     img {
       width: 100%;
@@ -652,6 +658,7 @@ main .sec-project {
       max-width: 150px;
       display: flex;
       justify-content: space-between;
+      z-index: 20;
       button {
         width: 71px;
         height: 71px;
@@ -659,6 +666,9 @@ main .sec-project {
         border: none;
         cursor: pointer;
         outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:first-of-type {
           background-color: #2b388f;
           margin-right: 8px;
@@ -1065,7 +1075,7 @@ main .sec-order {
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
@@ -1086,23 +1096,23 @@ footer {
         height: 28px;
         margin-left: 11px;
         border-radius: 50%;
+        border: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $white;
+        background-color: #293360;
+        overflow: hidden;
         transition: all 200ms ease-in-out;
-        svg {
-          // fill: black;
-          path {
-            fill: black;
-            transition: var(--transition-all);
-          }
+        .ic {
+          width: 100%;
+          height: 100%;
+          background: $white;
+          transition: all 200ms ease-in-out;
         }
         &:hover {
-          svg {
-            path {
-              fill: #00b027;
-            }
+          .ic {
+            transition: all 200ms ease-in-out;
+            background: #00b027;
           }
         }
       }
@@ -1304,6 +1314,9 @@ footer {
     }
   }
   /*/ .sec-facilities */
+  main .sec-project__img .flat_view {
+    bottom: 60px;
+  }
 }
 
 @media screen and(max-width:1200px) {
@@ -1437,6 +1450,179 @@ footer {
     }
   }
   /* / sec-order */
+  footer {
+    .footer-body {
+      > .container {
+        > .row {
+          justify-content: space-around;
+        }
+      }
+    }
+  }
 }
 @media screen and(max-width:768px) {
+  header .category {
+    &-title {
+      text-align: center;
+    }
+    &-text {
+      text-align: center;
+    }
+    .connection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &-list__item {
+      max-width: 300px;
+      flex-direction: column;
+      align-items: center;
+      .category-list__text {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  main .sec-about {
+    &__right {
+      .title {
+        text-align: center;
+        .mark-2 {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      h4 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      a {
+        text-align: center;
+      }
+      .sec-about__link {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  /* sec-service */
+  main .sec-service {
+    > .container {
+      height: 2065px;
+    }
+    .title {
+      margin-top: 60px;
+    }
+  }
+  /* / sec-service */
+  /* sec-facilities */
+  main .sec-facilities {
+    height: 695px;
+  }
+  /* / sec-facilities */
+  /* sec-project */
+  main .sec-project {
+    &__img {
+      .flat_view {
+        font-size: 15px;
+        padding: 8px 15px;
+      }
+    }
+    .tns-outer {
+      .tns-controls {
+        button {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  /* / sec-project */
+}
+
+@media screen and(min-width:300px) and(max-width:575px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  header .category {
+    &-title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    &-text {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    .connection {
+      &__link {
+        &:last-of-type {
+          margin: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  main {
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 30px !important;
+    line-height: 35px !important;
+  }
+
+  main .sec-facilities {
+    height: 520px;
+    &__text p {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  main .sec-project {
+    &__img {
+      .flat_view {
+        font-size: 10px;
+        padding: 1px 10px;
+        bottom: 38px;
+        left: 0;
+      }
+    }
+    .tns-outer {
+      .tns-controls {
+        bottom: 0;
+        right: 0;
+        button {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  main .sec-information__left h4 + p {
+    line-height: 23px;
+  }
+
+  main .sec-client {
+    margin-top: 0;
+  }
+
+  main .sec-order__img {
+    margin-top: -55px;
+  }
+  main .sec-order__contact {
+    margin-top: -40px;
+  }
+
+  footer .footer-bottom {
+    > .container {
+      justify-content: space-around;
+    }
+  }
 }

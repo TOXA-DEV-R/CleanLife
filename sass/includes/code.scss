@@ -46,6 +46,17 @@ html {
   }
   &__body {
     padding: 19px 24px;
+    cursor: pointer;
+    &.active {
+      .card__link {
+        span {
+          .ic {
+            background: $white;
+          }
+          background: #00b027;
+        }
+      }
+    }
   }
   &__title {
     font-family: $gilroy-bold;
@@ -77,37 +88,29 @@ html {
       list-style: disc;
     }
   }
-  &__btn {
+  &__link {
     margin-top: 29px;
     margin-bottom: 12px;
-    font-family: $gilroy-medium;
-    font-size: 16px;
-    line-height: 26px;
-    color: #00187b;
-    border: none;
     background: transparent;
     display: flex;
     align-items: center;
     cursor: pointer;
-    outline: none;
+    a {
+      font-family: $gilroy-medium;
+      font-size: 16px;
+      line-height: 26px;
+      color: #00187b;
+    }
     span {
-      margin-left: 19px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
       width: 32px;
       height: 32px;
-      background: transparent;
-    }
-    &:hover,
-    &.active {
-      span {
-        background: #00b027;
-        svg {
-          path {
-            stroke: white;
-          }
-        }
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 12px;
+      .ic {
+        background: #00187b;
       }
     }
   }
@@ -146,4 +149,22 @@ html {
 }
 .ic_times {
   -webkit-mask-image: url("../../images/icons/times.svg");
+}
+.ic_telegram {
+  -webkit-mask-image: url("../../images/icons/telegram.svg");
+}
+.ic_whatsapp {
+  -webkit-mask-image: url("../../images/icons/whatsapp.svg");
+}
+.ic_facebook {
+  -webkit-mask-image: url("../../images/icons/facebook.svg");
+}
+.ic_youtube {
+  -webkit-mask-image: url("../../images/icons/youtube.svg");
+}
+.ic_instagram {
+  -webkit-mask-image: url("../../images/icons/instagram.svg");
+}
+.ic_plus {
+  -webkit-mask-image: url("../../images/icons/plus.svg");
 }

@@ -845,12 +845,15 @@ main .sec-about > .container > .row {
   padding: 94px 0;
 }
 main .sec-about__left {
-  width: 632px;
-  height: 601px;
+  max-width: 632px;
+  width: 100%;
+  max-height: 601px;
+  width: 100%;
 }
 main .sec-about__left img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 main .sec-about__right {
   width: 458px;
@@ -888,13 +891,14 @@ main .sec-about__detailed span {
   color: #00ca2c;
 }
 main .sec-about__link {
-  display: inline-block;
-  padding: 16px 47px;
+  display: block;
+  width: 180px;
+  height: 50px;
   margin-top: 35px;
   font-family: var(--gilroy-medium);
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 50px;
   color: #ffffff;
   background: #00ca2c;
   border-radius: 5px;
@@ -923,14 +927,22 @@ main .sec-service .title {
   text-align: center;
 }
 main .sec-service__text {
-  max-width: 1095px;
+  max-width: 1125px;
   margin: 0 auto;
   margin-top: 20px;
+  padding: 0 15px;
   font-family: var(--gilroy-regular);
   font-size: 15px;
   line-height: 26px;
   text-align: center;
   color: #696969;
+}
+main .sec-service .card {
+  filter: drop-shadow(0px 0px 0 rgba(0, 176, 39, 0));
+  transition: var(--transition-all);
+}
+main .sec-service .card:hover {
+  filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
 }
 
 /* / sec-service */
@@ -994,7 +1006,8 @@ main .sec-project__image {
 main .sec-project__img {
   margin-top: 37px;
   width: 50%;
-  height: 722px;
+  max-height: 722px;
+  height: 100%;
   position: relative;
 }
 main .sec-project__img img {
@@ -1029,6 +1042,7 @@ main .sec-project .tns-outer .tns-controls {
   max-width: 150px;
   display: flex;
   justify-content: space-between;
+  z-index: 20;
 }
 main .sec-project .tns-outer .tns-controls button {
   width: 71px;
@@ -1037,6 +1051,9 @@ main .sec-project .tns-outer .tns-controls button {
   border: none;
   cursor: pointer;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .sec-project .tns-outer .tns-controls button:first-of-type {
   background-color: #2b388f;
@@ -1429,7 +1446,7 @@ main .sec-order__img {
 main .sec-order__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* / sec-order */
@@ -1452,18 +1469,23 @@ footer .footer-top__icons .footer-top__link {
   height: 28px;
   margin-left: 11px;
   border-radius: 50%;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  background-color: #293360;
+  overflow: hidden;
   transition: all 200ms ease-in-out;
 }
-footer .footer-top__icons .footer-top__link svg path {
-  fill: black;
-  transition: var(--transition-all);
+footer .footer-top__icons .footer-top__link .ic {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  transition: all 200ms ease-in-out;
 }
-footer .footer-top__icons .footer-top__link:hover svg path {
-  fill: #00b027;
+footer .footer-top__icons .footer-top__link:hover .ic {
+  transition: all 200ms ease-in-out;
+  background: #00b027;
 }
 footer .footer-body {
   padding-bottom: 44px;
@@ -1644,6 +1666,9 @@ footer .footer-bottom p {
   }
 
   /*/ .sec-facilities */
+  main .sec-project__img .flat_view {
+    bottom: 60px;
+  }
 }
 @media screen and (max-width: 1200px) {
   /* .navbar-mobil */
@@ -1744,6 +1769,149 @@ footer .footer-bottom p {
   }
 
   /* / sec-order */
+  footer .footer-body > .container > .row {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .category-title {
+    text-align: center;
+  }
+  header .category-text {
+    text-align: center;
+  }
+  header .category .connection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .category-list__item {
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .category-list__item .category-list__text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  main .sec-about__right .title {
+    text-align: center;
+  }
+  main .sec-about__right .title .mark-2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .sec-about__right h4 {
+    text-align: center;
+  }
+  main .sec-about__right p {
+    text-align: center;
+  }
+  main .sec-about__right a {
+    text-align: center;
+  }
+  main .sec-about__right .sec-about__link {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* sec-service */
+  main .sec-service > .container {
+    height: 2065px;
+  }
+  main .sec-service .title {
+    margin-top: 60px;
+  }
+
+  /* / sec-service */
+  /* sec-facilities */
+  main .sec-facilities {
+    height: 695px;
+  }
+
+  /* / sec-facilities */
+  /* sec-project */
+  main .sec-project__img .flat_view {
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+  main .sec-project .tns-outer .tns-controls button {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* / sec-project */
+}
+@media screen and (min-width: 300px) and (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  header .category-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  header .category-text {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  header .category .connection__link:last-of-type {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 30px !important;
+    line-height: 35px !important;
+  }
+
+  main .sec-facilities {
+    height: 520px;
+  }
+  main .sec-facilities__text p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  main .sec-project__img .flat_view {
+    font-size: 10px;
+    padding: 1px 10px;
+    bottom: 38px;
+    left: 0;
+  }
+  main .sec-project .tns-outer .tns-controls {
+    bottom: 0;
+    right: 0;
+  }
+  main .sec-project .tns-outer .tns-controls button {
+    width: 35px;
+    height: 35px;
+  }
+
+  main .sec-information__left h4 + p {
+    line-height: 23px;
+  }
+
+  main .sec-client {
+    margin-top: 0;
+  }
+
+  main .sec-order__img {
+    margin-top: -55px;
+  }
+
+  main .sec-order__contact {
+    margin-top: -40px;
+  }
+
+  footer .footer-bottom > .container {
+    justify-content: space-around;
+  }
 }
 main .about-img__cloumn {
   width: 275px;
@@ -2005,6 +2173,13 @@ html {
 }
 .card__body {
   padding: 19px 24px;
+  cursor: pointer;
+}
+.card__body.active .card__link span {
+  background: #00b027;
+}
+.card__body.active .card__link span .ic {
+  background: var(--white);
 }
 .card__title {
   font-family: var(--gilroy-bold);
@@ -2036,34 +2211,31 @@ html {
   color: #696969;
   list-style: disc;
 }
-.card__btn {
+.card__link {
   margin-top: 29px;
   margin-bottom: 12px;
-  font-family: var(--gilroy-medium);
-  font-size: 16px;
-  line-height: 26px;
-  color: #00187b;
-  border: none;
   background: transparent;
   display: flex;
   align-items: center;
   cursor: pointer;
-  outline: none;
 }
-.card__btn span {
-  margin-left: 19px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.card__link a {
+  font-family: var(--gilroy-medium);
+  font-size: 16px;
+  line-height: 26px;
+  color: #00187b;
+}
+.card__link span {
   width: 32px;
   height: 32px;
-  background: transparent;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
 }
-.card__btn:hover span, .card__btn.active span {
-  background: #00b027;
-}
-.card__btn:hover span svg path, .card__btn.active span svg path {
-  stroke: white;
+.card__link span .ic {
+  background: #00187b;
 }
 
 .btn-up {
@@ -2099,6 +2271,30 @@ html {
 
 .ic_times {
   -webkit-mask-image: url("../../images/icons/times.svg");
+}
+
+.ic_telegram {
+  -webkit-mask-image: url("../../images/icons/telegram.svg");
+}
+
+.ic_whatsapp {
+  -webkit-mask-image: url("../../images/icons/whatsapp.svg");
+}
+
+.ic_facebook {
+  -webkit-mask-image: url("../../images/icons/facebook.svg");
+}
+
+.ic_youtube {
+  -webkit-mask-image: url("../../images/icons/youtube.svg");
+}
+
+.ic_instagram {
+  -webkit-mask-image: url("../../images/icons/instagram.svg");
+}
+
+.ic_plus {
+  -webkit-mask-image: url("../../images/icons/plus.svg");
 }
 
 /*# sourceMappingURL=base.css.map */

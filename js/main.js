@@ -149,6 +149,10 @@ if (document.querySelector("#sec-client-slider")) {
         items: 2,
         gutter: 40,
       },
+      0: {
+        items: 1,
+        gutter: 40,
+      },
     },
   });
 }
@@ -192,47 +196,69 @@ btnUp.addEventListener("click", function () {
 });
 
 window.addEventListener("scroll", srollBtnUp);
+window.addEventListener("resize", srollBtnUp);
+srollBtnUp();
 function srollBtnUp() {
   if (window.pageYOffset < 500) {
     btnUp.style.display = "none";
   } else {
     btnUp.style.display = "block";
   }
+
+  if (document.body.offsetWidth < 820) {
+    btnUp.style.right = "30px";
+  } else {
+    btnUp.style.right = "125px";
+  }
 }
 
 // Read more card__btn
-if (document.querySelector(".card .card__btn")) {
-  const readMore = document.querySelectorAll(".card .card__btn");
+if (document.querySelector(".card .card__body")) {
+  const readMore = document.querySelectorAll(".card .card__body");
   const cardList = document.querySelectorAll(".card .card__list");
+  const cardLink = document.querySelectorAll(".card .card__link a");
   const card = document.querySelectorAll(".card");
 
-  readMore.forEach((item, index) => {
-    item.addEventListener("click", function () {
-      if (index === 0) {
-        cardList.forEach((itemList, indexInit) => {
-          if (index === indexInit) {
-            itemList.classList.toggle("active");
-            item.classList.toggle("active");
+  function cardAouto(number, callBack) {
+    readMore.forEach((item, index) => {
+      if (callBack === "mouseover") {
+        item.addEventListener(callBack, function () {
+          if (index === number) {
+            cardList.forEach((itemList, indexInit) => {
+              if (index === indexInit) {
+                itemList.classList.add("active");
+                item.classList.add("active");
+                cardLink.forEach((link, indexLink) => {
+                  if (indexLink === indexInit) {
+                    link.textContent = "Подробнее";
+                  }
+                });
+              }
+            });
           }
         });
-      }
-      if (index === 1) {
-        cardList.forEach((itemList, indexInit) => {
-          if (index === indexInit) {
-            itemList.classList.toggle("active");
-            item.classList.toggle("active");
-          }
-        });
-      }
-      if (index === 2) {
-        cardList.forEach((itemList, indexInit) => {
-          if (index === indexInit) {
-            itemList.classList.toggle("active");
-            item.classList.toggle("active");
+      } else {
+        item.addEventListener(callBack, function () {
+          if (index === number) {
+            cardList.forEach((itemList, indexInit) => {
+              if (index === indexInit) {
+                itemList.classList.remove("active");
+                item.classList.remove("active");
+                cardLink.forEach((link, indexLink) => {
+                  if (indexLink === indexInit) {
+                    link.textContent = "Читать далее";
+                  }
+                });
+              }
+            });
           }
         });
       }
     });
+  }
+  readMore.forEach((item, index) => {
+    item.addEventListener("mouseover", () => cardAouto(index, "mouseover"));
+    item.addEventListener("mouseout", () => cardAouto(index, "mouseout"));
   });
 }
 
