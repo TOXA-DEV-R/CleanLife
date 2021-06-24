@@ -65,7 +65,8 @@ main .about-img {
     margin-top: 8px;
     background: $white;
   }
-  &__text {
+  &__link {
+    display: block;
     text-align: center;
     margin-top: 25px;
     font-family: $gilroy-medium;

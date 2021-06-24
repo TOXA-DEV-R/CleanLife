@@ -55,7 +55,8 @@ main .about-img__middle {
   margin-top: 8px;
   background: var(--white);
 }
-main .about-img__text {
+main .about-img__link {
+  display: block;
   text-align: center;
   margin-top: 25px;
   font-family: var(--gilroy-medium);
