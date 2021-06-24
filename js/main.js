@@ -102,8 +102,6 @@ if (document.querySelector("#sec-project__images")) {
 if (document.querySelector("#sec-equipment-slider")) {
   let secEquipmentSlider = tns({
     container: "#sec-equipment-slider",
-    items: 3,
-    gutter: 160,
     swipeAngle: false,
     speed: 400,
     navPosition: "bottom",
@@ -112,6 +110,19 @@ if (document.querySelector("#sec-equipment-slider")) {
     mouseDrag: true,
     rewind: true,
     nav: true,
+    responsive: {
+      1200: {
+        items: 3,
+        gutter: 160,
+      },
+      992: {
+        gutter: 140,
+      },
+      768: {
+        items: 2,
+        gutter: 160,
+      },
+    },
   });
 }
 
@@ -119,8 +130,6 @@ if (document.querySelector("#sec-equipment-slider")) {
 if (document.querySelector("#sec-client-slider")) {
   let secClientSlider = tns({
     container: "#sec-client-slider",
-    items: 3,
-    gutter: 52,
     swipeAngle: false,
     speed: 400,
     navPosition: "bottom",
@@ -129,6 +138,18 @@ if (document.querySelector("#sec-client-slider")) {
     mouseDrag: true,
     rewind: true,
     nav: true,
+    responsive: {
+      1200: {
+        items: 3,
+      },
+      992: {
+        gutter: 52,
+      },
+      768: {
+        items: 2,
+        gutter: 40,
+      },
+    },
   });
 }
 
@@ -216,40 +237,46 @@ if (document.querySelector(".card .card__btn")) {
 }
 
 // navbar-mobil btn-toggol
-const btnToggl = document.querySelector(".navbar-mobil .btn-toggol");
-const bars = document.querySelector(".navbar-mobil .btn-toggol i");
-const navbarMobilNavbar = document.querySelector(
-  ".navbar-mobil .navbar-mobil__navbar"
-);
-btnToggl.addEventListener("click", () => {
-  if (bars.classList.contains("fa-bars")) {
-    bars.classList.remove("fa-bars");
-    bars.classList.add("fa-times");
-    navbarMobilNavbar.classList.add("active");
-  } else {
-    bars.classList.remove("fa-times");
-    bars.classList.add("fa-bars");
-    navbarMobilNavbar.classList.remove("active");
-  }
-});
-
-// navbar-fixed Auto
-window.addEventListener("scroll", navbarFixedAuto);
-const firstBarndLogo = "./images/icons/cleanlife.svg";
-const secondBarndLogo = "./images/icons/brand_logo.svg";
-
-function navbarFixedAuto() {
+if (document.querySelector("header .category")) {
   const navbarFixedMobil = document.querySelector(".navbar-mobil");
-  const brandLogo = document.querySelector(".navbar .brand-logo img");
-  if (window.pageYOffset > 500) {
-    navbarFixedMobil.classList.add("navbar-mobil-active");
-    // bars.classList.add("fa-bars");
-    // bars.classList.remove("fa-times");
-    brandLogo.src = secondBarndLogo;
-    console.log(brandLogo);
-    navbarMobilNavbar.classList.remove("active");
-  } else {
-    brandLogo.src = firstBarndLogo;
-    navbarFixedMobil.classList.remove("navbar-mobil-active");
+  const btnToggl = document.querySelector(".navbar-mobil .btn-toggol");
+  const navbarMobilNavbar = document.querySelector(
+    ".navbar-mobil .navbar-mobil__navbar"
+  );
+  const brandLogo = document.querySelector(
+    ".navbar-mobil__menu .brand-logo img"
+  );
+  const bars = document.querySelector(".navbar-mobil .btn-toggol i");
+  const firstBarndLogo = "./images/icons/brand_logo.svg";
+  const secondBarndLogo = "./images/icons/cleanlife.svg";
+
+  btnToggl.addEventListener("click", () => {
+    if (bars.classList.contains("ic_bars")) {
+      bars.classList.remove("ic_bars");
+      bars.classList.add("ic_times");
+      bars.classList.add("color-active");
+      navbarMobilNavbar.classList.add("active");
+      navbarFixedMobil.classList.add("navbar-mobil-bg");
+      brandLogo.src = firstBarndLogo;
+    } else {
+      bars.classList.remove("ic_times");
+      bars.classList.remove("color-active");
+      bars.classList.add("ic_bars");
+      navbarMobilNavbar.classList.remove("active");
+      navbarFixedMobil.classList.remove("navbar-mobil-bg");
+      brandLogo.src = secondBarndLogo;
+    }
+  });
+
+  // navbar-fixed Auto
+  window.addEventListener("scroll", navbarFixedAuto);
+  navbarFixedAuto();
+  function navbarFixedAuto() {
+    if (window.pageYOffset > 500) {
+      navbarFixedMobil.classList.add("navbar-mobil-active");
+      // navbarMobilNavbar.classList.remove("active");
+    } else {
+      navbarFixedMobil.classList.remove("navbar-mobil-active");
+    }
   }
 }
