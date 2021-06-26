@@ -255,11 +255,17 @@ main .servies_details {
     }
     .work-info {
       margin-left: 24px;
-      svg {
-        path {
-          fill: #00b027;
+      span {
+        width: 47px;
+        height: 47px;
+        display: block;
+        svg {
+          path {
+            fill: #00b027;
+          }
         }
       }
+
       &__titles {
         font-family: $gilroy-bold;
         font-size: 18px;
@@ -273,6 +279,7 @@ main .servies_details {
   }
   &__checked {
     display: flex;
+    align-items: center;
     margin-top: 23px;
     img {
       width: 31px;
@@ -280,7 +287,6 @@ main .servies_details {
       margin-right: 15px;
     }
     p {
-      margin-top: 2px;
       font-family: $gilroy-medium;
       font-size: 15px;
       line-height: 31px;
@@ -294,3 +300,62 @@ footer {
   margin-top: 81px;
 }
 /* / footer */
+
+// responsev
+
+@media screen and (max-width: 1200px) {
+  main .servies_details {
+    > .container {
+      > .row {
+        justify-content: space-around;
+      }
+    }
+    &__width {
+      max-width: 100%;
+    }
+    &__titles {
+      margin-top: 56px !important;
+    }
+
+    &__selects {
+      max-width: 320px;
+      width: 100%;
+    }
+    &__questions {
+      max-width: 320px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .servies_details {
+    &__experience {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__titles {
+      text-align: center;
+    }
+    &__text {
+      text-align: center;
+    }
+    .work-info {
+      margin-left: 0;
+      &__titles {
+        text-align: center;
+      }
+      span {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+}

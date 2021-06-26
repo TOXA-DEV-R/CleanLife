@@ -149,7 +149,7 @@ if (document.querySelector("#sec-client-slider")) {
         items: 2,
         gutter: 40,
       },
-      0: {
+      200: {
         items: 1,
         gutter: 40,
       },
@@ -179,6 +179,8 @@ function navbarWidthResize() {
     navbar.style.display = "none";
     navbarFixed.style.display = "none";
     navbarMobil.style.display = "block";
+    if (document.body.offsetWidth < 922) {
+    }
   } else {
     navbar.style.display = "flex";
     navbarFixed.style.display = "none";
@@ -202,13 +204,13 @@ function srollBtnUp() {
   if (window.pageYOffset < 500) {
     btnUp.style.display = "none";
   } else {
-    btnUp.style.display = "block";
+    btnUp.style.display = "flex";
   }
 
   if (document.body.offsetWidth < 820) {
-    btnUp.style.right = "30px";
+    btnUp.classList.add("btn-up-change");
   } else {
-    btnUp.style.right = "125px";
+    btnUp.classList.remove("btn-up-change");
   }
 }
 
@@ -217,7 +219,6 @@ if (document.querySelector(".card .card__body")) {
   const readMore = document.querySelectorAll(".card .card__body");
   const cardList = document.querySelectorAll(".card .card__list");
   const cardLink = document.querySelectorAll(".card .card__link a");
-  const card = document.querySelectorAll(".card");
 
   function cardAouto(number, callBack) {
     readMore.forEach((item, index) => {
@@ -300,9 +301,58 @@ if (document.querySelector("header .category")) {
   function navbarFixedAuto() {
     if (window.pageYOffset > 500) {
       navbarFixedMobil.classList.add("navbar-mobil-active");
-      // navbarMobilNavbar.classList.remove("active");
     } else {
       navbarFixedMobil.classList.remove("navbar-mobil-active");
     }
   }
 }
+
+// modal window
+function modalWindows(name) {
+  this.order = document.getElementById(name);
+  const modalWindow = document.getElementById("modal");
+  const modalCloumn = document.getElementById("modal__cloumn");
+  const modalClose = document.getElementById("btn-close");
+
+  this.order.addEventListener("click", () => {
+    modalWindow.classList.add("modal-active");
+    modalCloumn.classList.add("modal__cloumn-active");
+    console.log("order");
+  });
+
+  modalClose.addEventListener("click", () => {
+    modalWindow.classList.remove("modal-active");
+  });
+
+  // document.onclick = function (e) {
+  //   if (e.target.id !== name && e.target.id !== "modal__cloumn") {
+  //     modalWindow.classList.remove("modal-active");
+  //     modalCloumn.classList.remove("modal__cloumn-active");
+  //   }
+  // };
+}
+
+const firstModal = new modalWindows("first-order");
+const secondModal = new modalWindows("second-order");
+
+// languageBasic
+function languageControl(firstElement, secondElement, name) {
+  const languageBasic = document.getElementById(firstElement);
+  const langContent = document.getElementById(secondElement);
+
+  languageBasic.addEventListener("click", () => {
+    langContent.classList.toggle("lang__content-active");
+  });
+
+  window.addEventListener("click", function (e) {
+    if (
+      e.target.id !== `${name}-lang-basic` &&
+      e.target.id !== `${name}-lang__content`
+    ) {
+      langContent.classList.remove("lang__content-active");
+    }
+  });
+}
+languageControl("first-lang-basic", "first-lang__content", "first");
+languageControl("second-lang-basic", "second-lang__content", "second");
+languageControl("third-lang-basic", "third-lang__content", "third");

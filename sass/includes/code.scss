@@ -31,8 +31,10 @@ html {
 }
 
 .card {
+  max-width: 364px;
+  width: 100%;
+  margin: 0 auto;
   margin-top: 48px;
-  width: 364px;
   background: $white;
   filter: drop-shadow(0px 0px 19px rgba(0, 176, 39, 0.1));
   &__img {
@@ -125,11 +127,23 @@ html {
   background: #00b027;
   border: none;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
   z-index: 999;
   outline: none;
   transition: all 200ms ease-in-out;
   &:hover {
     background: #2b388f;
+  }
+  &.btn-up-change {
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    bottom: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -145,7 +159,7 @@ html {
   }
 }
 .ic_bars {
-  -webkit-mask-image: url("../../images/icons/bars.svg");
+  -webkit-mask-image: url("../../images/icons/bars_icon.svg");
 }
 .ic_times {
   -webkit-mask-image: url("../../images/icons/times.svg");
@@ -167,4 +181,7 @@ html {
 }
 .ic_plus {
   -webkit-mask-image: url("../../images/icons/plus.svg");
+}
+.arrow-up {
+  -webkit-mask-image: url("../../images/icons/arrow-up.svg");
 }

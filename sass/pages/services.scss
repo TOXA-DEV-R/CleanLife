@@ -10,10 +10,11 @@ $transition-all: var(--transition-all);
 }
 /* sec-service */
 main .sec-service {
-  padding-bottom: 96px;
+  padding-bottom: 0;
   > .container {
     z-index: 50;
     > .row {
+      height: unset;
       &::after {
         content: "";
         display: none;
@@ -77,13 +78,16 @@ main .business-shine {
     }
   }
 }
-main .sec-service {
-  padding-bottom: 69px;
-}
+
 footer {
   margin-top: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  main .sec-service > .container {
+    height: 792px;
+  }
+}
 @media screen and (max-width: 1200px) {
   main .sec-service {
     padding: 0;

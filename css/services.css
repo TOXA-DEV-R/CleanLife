@@ -1,9 +1,12 @@
 /* sec-service */
 main .sec-service {
-  padding-bottom: 96px;
+  padding-bottom: 0;
 }
 main .sec-service > .container {
   z-index: 50;
+}
+main .sec-service > .container > .row {
+  height: unset;
 }
 main .sec-service > .container > .row::after {
   content: "";
@@ -66,14 +69,15 @@ main .business-shine__img img {
   object-fit: contain;
 }
 
-main .sec-service {
-  padding-bottom: 69px;
-}
-
 footer {
   margin-top: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  main .sec-service > .container {
+    height: 792px;
+  }
+}
 @media screen and (max-width: 1200px) {
   main .sec-service {
     padding: 0;
