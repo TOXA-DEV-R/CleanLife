@@ -187,6 +187,7 @@ function navbarWidthResize() {
     navbarMobil.style.display = "none";
   }
 }
+
 // btnUp
 const btnUp = document.querySelector(".btn-up");
 btnUp.addEventListener("click", function () {
@@ -212,11 +213,17 @@ function srollBtnUp() {
   } else {
     btnUp.classList.remove("btn-up-change");
   }
+
+  if (window.pageYOffset > 7100) {
+    btnUp.style.bottom = "523px";
+  } else {
+    btnUp.style.bottom = "40px";
+  }
 }
 
 // Read more card__btn
 if (document.querySelector(".card .card__body")) {
-  const readMore = document.querySelectorAll(".card .card__body");
+  const readMore = document.querySelectorAll(".card");
   const cardList = document.querySelectorAll(".card .card__list");
   const cardLink = document.querySelectorAll(".card .card__link a");
 
@@ -317,15 +324,14 @@ function modalWindows(name) {
   this.order.addEventListener("click", () => {
     modalWindow.classList.add("modal-active");
     modalCloumn.classList.add("modal__cloumn-active");
-    console.log("order");
   });
 
   modalClose.addEventListener("click", () => {
     modalWindow.classList.remove("modal-active");
   });
 
-  // document.onclick = function (e) {
-  //   if (e.target.id !== name && e.target.id !== "modal__cloumn") {
+  // window.onclick = function (e) {
+  //   if (e.target.id !== "first-order" && e.target.id !== "modal__cloumn") {
   //     modalWindow.classList.remove("modal-active");
   //     modalCloumn.classList.remove("modal__cloumn-active");
   //   }
@@ -334,6 +340,7 @@ function modalWindows(name) {
 
 const firstModal = new modalWindows("first-order");
 const secondModal = new modalWindows("second-order");
+const thirdModal = new modalWindows("third-order");
 
 // languageBasic
 function languageControl(firstElement, secondElement, name) {
@@ -358,14 +365,28 @@ languageControl("second-lang-basic", "second-lang__content", "second");
 languageControl("third-lang-basic", "third-lang__content", "third");
 
 // navbar menu-change__link
-const menuChangeLink = document.getElementById("menu-change__link");
-const navbarMenuInit = document.getElementById("menu-init");
+function navbarMenuChange() {
+  const menuChangeLink = document.getElementById("menu-change__link");
+  const navbarMenuInit = document.getElementById("menu-init");
 
-menuChangeLink.onclick = function () {
-  navbarMenuInit.style.display = "block";
-};
-// window.addEventListener("click", function (e) {
-//   if (e.target.id !== "menu-change__link" && e.target.id !== "menu-init") {
-//     navbarMenuInit.style.display = "none";
-//   }
-// });
+  menuChangeLink.onclick = function () {
+    navbarMenuInit.classList.toggle("active");
+  };
+
+  // window.addEventListener("click", function (e) {
+  //   if (e.target.id !== "menu-init" && e.target.id !== "menu-change__link") {
+  //     console.log(2);
+  //     navbarMenuInit.classList.remove("active");
+  //   }
+  // });
+}
+if (document.getElementById("menu-change__link")) {
+  navbarMenuChange();
+}
+
+if (document.querySelector(".sec-facilities")) {
+  document.querySelector(".sec-facilities").parentNode.style.padding = "0";
+}
+if (document.querySelector(".sec-project")) {
+  document.querySelector(".sec-project").childNodes[1].style.padding = "0";
+}

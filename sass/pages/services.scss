@@ -12,9 +12,7 @@ $transition-all: var(--transition-all);
 main .sec-service {
   padding-bottom: 0;
   > .container {
-    z-index: 50;
     > .row {
-      height: unset;
       &::after {
         content: "";
         display: none;
@@ -83,11 +81,6 @@ footer {
   margin-top: 0;
 }
 
-@media screen and (min-width: 1200px) {
-  main .sec-service > .container {
-    height: 792px;
-  }
-}
 @media screen and (max-width: 1200px) {
   main .sec-service {
     padding: 0;
@@ -123,9 +116,9 @@ footer {
     }
   }
 }
-@media (max-width: 500px) and (min-width: 320px) {
+
+@media (max-width: 500px) and (min-width: 300px) {
   .sec-service {
-    position: relative;
     .justify-between {
       padding: 0 20px;
       justify-content: center;

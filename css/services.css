@@ -2,12 +2,6 @@
 main .sec-service {
   padding-bottom: 0;
 }
-main .sec-service > .container {
-  z-index: 50;
-}
-main .sec-service > .container > .row {
-  height: unset;
-}
 main .sec-service > .container > .row::after {
   content: "";
   display: none;
@@ -73,11 +67,6 @@ footer {
   margin-top: 0;
 }
 
-@media screen and (min-width: 1200px) {
-  main .sec-service > .container {
-    height: 792px;
-  }
-}
 @media screen and (max-width: 1200px) {
   main .sec-service {
     padding: 0;
@@ -101,10 +90,7 @@ footer {
     width: 85%;
   }
 }
-@media (max-width: 500px) and (min-width: 320px) {
-  .sec-service {
-    position: relative;
-  }
+@media (max-width: 500px) and (min-width: 300px) {
   .sec-service .justify-between {
     padding: 0 20px;
     justify-content: center;

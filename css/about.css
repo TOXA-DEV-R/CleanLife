@@ -1,7 +1,10 @@
 /* about-our */
+main .about-our > .container {
+  padding: 0;
+}
 main .about-our-card {
-  width: 365px;
-  height: 398px;
+  max-width: 365px;
+  width: 100%;
   margin-top: 78px;
   padding: 0 29px;
   border: 1px solid #eeeff2;
@@ -52,6 +55,7 @@ main .about-our-card__body h4 {
 }
 main .about-our-card__body p {
   margin-top: 23px;
+  margin-bottom: 29px;
   font-family: var(--gilroy-medium);
   font-size: 15px;
   line-height: 31px;
@@ -79,6 +83,9 @@ main .about-our-card:hover .about-our-card__body p {
 
 /* / about-our */
 /* about-info */
+.about-info > .container {
+  padding: 0;
+}
 .about-info .title {
   max-width: 831px;
   margin-top: 84px;
@@ -96,6 +103,7 @@ main .about-our-card:hover .about-our-card__body p {
 }
 .about-info__text {
   display: flex;
+  align-items: center;
   margin-top: 25px;
 }
 .about-info__text img {
@@ -113,22 +121,25 @@ main .about-our-card:hover .about-our-card__body p {
 
 /* / about-info */
 /* sec-client */
-.sec-client {
+main .sec-client {
   margin-top: 99px;
   padding-bottom: 139px;
   background: #eff2f7;
   overflow: hidden;
 }
-.sec-client .card-column .card {
+main .sec-client .card-column .card {
   filter: unset;
 }
-.sec-client .title {
+main .sec-client .title {
   margin-top: 82px;
 }
 
 /* / sec-client */
 main .sec-client {
   padding-bottom: 69px;
+}
+main .sec-client > .container {
+  padding: 0;
 }
 main .sec-client .tns-outer .tns-nav {
   bottom: 17px;
@@ -160,13 +171,16 @@ footer {
     line-height: 50px;
   }
 }
-@media (max-width: 500px) and (min-width: 320px) {
+@media (max-width: 500px) and (min-width: 300px) {
   .about-our .justify-between {
-    padding: 0 20px;
+    padding: 0 15px;
     justify-content: center;
   }
   .about-our .justify-between .about-our-card {
     margin-top: 50px;
+  }
+  .about-our-card__body p {
+    line-height: 25px !important;
   }
 
   .about-info .justify-between {

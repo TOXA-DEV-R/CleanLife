@@ -304,6 +304,10 @@ footer {
   main .servies_details__titles {
     text-align: center;
   }
+  main .servies_details__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
   main .servies_details__text {
     text-align: center;
   }

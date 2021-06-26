@@ -275,6 +275,19 @@ footer {
       padding: 0 20px;
     }
   }
+
+  main .contacts__form .number {
+    width: 100%;
+  }
+
+  main .contacts__form .selected {
+    width: 100%;
+  }
+
+  main .contacts__form .btn-submit {
+    width: 100%;
+  }
+
   main .contacts-map {
     margin-top: 64px;
     iframe {

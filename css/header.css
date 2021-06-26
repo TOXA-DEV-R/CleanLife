@@ -7,18 +7,31 @@ header .navbar {
   background: var(--white);
   z-index: 15;
 }
+header .heder-right .menu__item:nth-of-type(3) span path {
+  stroke: var(--black);
+}
 header .heder-right .menu__link {
-  color: black;
+  color: var(--black);
 }
-header .heder-right .call-number p {
-  color: black;
+header .heder-right .call-number a {
+  color: var(--black);
 }
-header .heder-right .lang__card .lang-link-active {
-  color: black;
-  border-color: black;
+header .heder-right .lang__card .lang-basic {
+  color: var(--black);
+  border-color: var(--black);
 }
-header .heder-right .lang__card .lang-link-active svg path {
-  stroke: black;
+header .heder-right .lang__card .lang-basic svg path {
+  stroke: var(--black);
+}
+header .navbar-fixed .heder-right .call-number a {
+  color: var(--white);
+}
+header .navbar-fixed .heder-right .lang__card .lang-basic {
+  color: var(--white);
+  border-color: var(--white);
+}
+header .navbar-fixed .heder-right .lang__card .lang-basic svg path {
+  stroke: var(--white);
 }
 
 /* / about header */
