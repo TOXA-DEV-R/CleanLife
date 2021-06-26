@@ -489,13 +489,21 @@ header .heder-right .menu__item:nth-of-type(3) {
   position: relative;
   z-index: 20;
 }
-header .heder-right .menu__item:nth-of-type(3) a {
+header .heder-right .menu__item:nth-of-type(3) .menu-block {
   display: flex;
   align-items: center;
 }
-header .heder-right .menu__item:nth-of-type(3) a svg {
-  transform: translateY(-1px);
+header .heder-right .menu__item:nth-of-type(3) .menu-block span {
   margin-left: 7px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  transition: var(--transition-all);
+}
+header .heder-right .menu__item:nth-of-type(3) .menu-block span:hover {
+  border-color: white;
+}
+header .heder-right .menu__item:nth-of-type(3) .menu-block span svg {
+  transform: translateY(-1px);
 }
 header .heder-right .menu__item:nth-of-type(3):hover .menu-init {
   display: block;
@@ -762,7 +770,7 @@ header .navbar-fixed nav .lang__card .lang-link-active svg path {
 header .navbar-fixed .order {
   background-color: var(--white);
   color: #00ca2c;
-  border-bottom: 0 solid #00197b;
+  border-bottom: 4 solid #00197b00;
   transition: var(--transition-all);
 }
 header .navbar-fixed .order:hover {

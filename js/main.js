@@ -356,3 +356,16 @@ function languageControl(firstElement, secondElement, name) {
 languageControl("first-lang-basic", "first-lang__content", "first");
 languageControl("second-lang-basic", "second-lang__content", "second");
 languageControl("third-lang-basic", "third-lang__content", "third");
+
+// navbar menu-change__link
+const menuChangeLink = document.getElementById("menu-change__link");
+const navbarMenuInit = document.getElementById("menu-init");
+
+menuChangeLink.onclick = function () {
+  navbarMenuInit.style.display = "block";
+};
+// window.addEventListener("click", function (e) {
+//   if (e.target.id !== "menu-change__link" && e.target.id !== "menu-init") {
+//     navbarMenuInit.style.display = "none";
+//   }
+// });

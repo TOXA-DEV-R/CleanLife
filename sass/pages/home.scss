@@ -65,12 +65,20 @@ header {
         &:nth-of-type(3) {
           position: relative;
           z-index: 20;
-          a {
+          .menu-block {
             display: flex;
             align-items: center;
-            svg {
-              transform: translateY(-1px);
+            span {
               margin-left: 7px;
+              cursor: pointer;
+              border-bottom: 1px solid rgba(255, 255, 255, 0);
+              transition: var(--transition-all);
+              &:hover {
+                border-color: rgb(255, 255, 255);
+              }
+              svg {
+                transform: translateY(-1px);
+              }
             }
           }
           &:hover {
@@ -360,7 +368,7 @@ header {
     .order {
       background-color: $white;
       color: #00ca2c;
-      border-bottom: 0 solid #00197b;
+      border-bottom: 4 solid #00197b00;
       transition: var(--transition-all);
       &:hover {
         border-bottom: 4px solid #00197b;
