@@ -1051,6 +1051,7 @@ main .sec-project__img {
   max-height: 722px;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
 main .sec-project__img img {
   width: 100%;
@@ -1713,6 +1714,47 @@ main .sec-order__img img {
 }
 
 /* / modal */
+/* second-modal*/
+.modal-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.521);
+  z-index: 999;
+  transform: scale(0);
+  transition: var(--transition-all);
+}
+.modal-image-basic {
+  max-width: 700px;
+  width: 100%;
+  max-height: 700px;
+  height: 100%;
+  position: relative;
+}
+.modal-image-basic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-image-basic .modal-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.modal-image-basic .modal-close .ic {
+  background-color: var(--black);
+}
+.modal-image.active {
+  transform: scale(1);
+}
+
+/* / second-modal*/
 /* footer */
 footer {
   margin-top: 70px;

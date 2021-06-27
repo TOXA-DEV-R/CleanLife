@@ -390,3 +390,23 @@ if (document.querySelector(".sec-facilities")) {
 if (document.querySelector(".sec-project")) {
   document.querySelector(".sec-project").childNodes[1].style.padding = "0";
 }
+
+//modal-window images
+if (document.querySelector(".sec-project__img")) {
+  const modalDataset = document.querySelectorAll(".sec-project__img");
+  const modalWindow = document.getElementById("modal-image");
+  const modalBasicWindow = document.getElementById("modal-basic");
+  const modalClose = document.querySelector(".modal-close");
+
+  modalDataset.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      modalWindow.src = item.dataset.src;
+      modalBasicWindow.classList.add("active");
+      console.log(item);
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    modalBasicWindow.classList.remove("active");
+  });
+}
