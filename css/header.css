@@ -10,6 +10,9 @@ header .navbar {
 header .heder-right .menu__item:nth-of-type(3) span path {
   stroke: var(--white);
 }
+header .heder-right .menu__item .menu-block span svg path {
+  stroke: var(--black);
+}
 header .heder-right .menu__link {
   color: var(--black);
 }
@@ -31,6 +34,9 @@ header .navbar-fixed .heder-right .lang__card .lang-basic {
   border-color: var(--white);
 }
 header .navbar-fixed .heder-right .lang__card .lang-basic svg path {
+  stroke: var(--white);
+}
+header .navbar-fixed .heder-right .menu__item:nth-of-type(3) .menu-block span svg path {
   stroke: var(--white);
 }
 

@@ -29,6 +29,15 @@ header {
             }
           }
         }
+        .menu-block {
+          span {
+            svg {
+              path {
+                stroke: $black;
+              }
+            }
+          }
+        }
       }
       &__link {
         color: $black;
@@ -61,6 +70,15 @@ header {
       svg {
         path {
           stroke: $white;
+        }
+      }
+    }
+    .heder-right .menu__item:nth-of-type(3) .menu-block {
+      span {
+        svg {
+          path {
+            stroke: $white;
+          }
         }
       }
     }

@@ -64,5 +64,12 @@ main .about-img__link {
   line-height: 24px;
   color: var(--white);
 }
+main .about-img__link a {
+  color: var(--white);
+  transition: var(--transition-all);
+}
+main .about-img__link a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=about_img.css.map */
