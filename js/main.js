@@ -321,14 +321,17 @@ function modalWindows(name) {
   const modalCloumn = document.getElementById("modal__cloumn");
   const modalClose = document.getElementById("btn-close");
 
-  this.order.addEventListener("click", () => {
-    modalWindow.classList.add("modal-active");
-    modalCloumn.classList.add("modal__cloumn-active");
-  });
-
-  modalClose.addEventListener("click", () => {
-    modalWindow.classList.remove("modal-active");
-  });
+  if (this.order) {
+    this.order.addEventListener("click", () => {
+      modalWindow.classList.add("modal-active");
+      modalCloumn.classList.add("modal__cloumn-active");
+    });
+    if (modalClose) {
+      modalClose.addEventListener("click", () => {
+        modalWindow.classList.remove("modal-active");
+      });
+    }
+  }
 
   // window.onclick = function (e) {
   //   if (e.target.id !== "first-order" && e.target.id !== "modal__cloumn") {
@@ -347,9 +350,11 @@ function languageControl(firstElement, secondElement, name) {
   const languageBasic = document.getElementById(firstElement);
   const langContent = document.getElementById(secondElement);
 
-  languageBasic.addEventListener("click", () => {
-    langContent.classList.toggle("lang__content-active");
-  });
+  if (languageBasic) {
+    languageBasic.addEventListener("click", () => {
+      langContent.classList.toggle("lang__content-active");
+    });
+  }
 
   window.addEventListener("click", function (e) {
     if (
@@ -373,12 +378,13 @@ function navbarMenuChange() {
     navbarMenuInit.classList.toggle("active");
   };
 
-  // window.addEventListener("click", function (e) {
-  //   if (e.target.id !== "menu-init" && e.target.id !== "menu-change__link") {
-  //     console.log(2);
-  //     navbarMenuInit.classList.remove("active");
-  //   }
-  // });
+  window.addEventListener("click", function (e) {
+    console.log(2);
+    console.log(e.target);
+    if (e.target.id !== "menu-init" && e.target.id !== "menu-change__link" && navbarMenuInit.classList.contains("active")) {
+      navbarMenuInit.classList.remove("active");
+    }
+  });
 }
 if (document.getElementById("menu-change__link")) {
   navbarMenuChange();

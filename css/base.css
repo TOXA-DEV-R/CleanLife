@@ -504,6 +504,7 @@ header .heder-right .menu__item:nth-of-type(3) .menu-block span:hover {
 }
 header .heder-right .menu__item:nth-of-type(3) .menu-block span svg {
   transform: translateY(-1px);
+  pointer-events: none;
 }
 header .heder-right .menu__item:nth-of-type(3):hover .menu-init {
   display: block;
