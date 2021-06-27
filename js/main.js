@@ -462,4 +462,6 @@ function tabsFunction() {
     }
   });
 }
-tabsFunction();
+if (document.querySelector(".tabs")) {
+  tabsFunction();
+}
