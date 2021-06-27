@@ -334,7 +334,11 @@ function modalWindows(name) {
   }
 
   // window.onclick = function (e) {
-  //   if (e.target.id !== "first-order" && e.target.id !== "modal__cloumn") {
+  //   if (
+  //     e.target.id !== "first-order" &&
+  //     e.target.id !== "modal__cloumn" &&
+  //     modalWindow.classList.contains("modal-active")
+  //   ) {
   //     modalWindow.classList.remove("modal-active");
   //     modalCloumn.classList.remove("modal__cloumn-active");
   //   }
@@ -371,22 +375,40 @@ languageControl("third-lang-basic", "third-lang__content", "third");
 
 // navbar menu-change__link
 function navbarMenuChange() {
-  const menuChangeLink = document.getElementById("menu-change__link");
-  const navbarMenuInit = document.getElementById("menu-init");
+  const menuChangeLink = document.querySelectorAll(".menu-change__link");
+  const navbarMenuInit = document.querySelectorAll(".menu-init");
 
-  menuChangeLink.onclick = function () {
-    navbarMenuInit.classList.toggle("active");
-  };
+  menuChangeLink.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      navbarMenuInit.forEach((itemInit, indexInit) => {
+        if (indexInit === index) {
+          itemInit.classList.toggle("active");
+        }
+      });
+    });
+  });
 
   window.addEventListener("click", function (e) {
-    console.log(2);
-    console.log(e.target);
-    if (e.target.id !== "menu-init" && e.target.id !== "menu-change__link" && navbarMenuInit.classList.contains("active")) {
-      navbarMenuInit.classList.remove("active");
+    let navbarlinkBoolean = false;
+    navbarMenuInit.forEach((item, index) => {
+      if (item.classList.contains("active")) {
+        navbarlinkBoolean = item.classList.contains("active");
+      }
+    });
+
+    if (
+      e.target.classList[0] !== "menu-init" &&
+      e.target.classList[0] !== "menu-change__link" &&
+      navbarlinkBoolean
+    ) {
+      navbarMenuInit.forEach((item, index) => {
+        item.classList.remove("active");
+      });
     }
   });
 }
-if (document.getElementById("menu-change__link")) {
+
+if (document.querySelector(".menu-change__link")) {
   navbarMenuChange();
 }
 
@@ -408,7 +430,6 @@ if (document.querySelector(".sec-project__img")) {
     item.addEventListener("click", () => {
       modalWindow.src = item.dataset.src;
       modalBasicWindow.classList.add("active");
-      console.log(item);
     });
   });
 

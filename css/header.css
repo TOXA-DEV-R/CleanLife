@@ -8,7 +8,7 @@ header .navbar {
   z-index: 15;
 }
 header .heder-right .menu__item:nth-of-type(3) span path {
-  stroke: var(--black);
+  stroke: var(--white);
 }
 header .heder-right .menu__link {
   color: var(--black);
