@@ -117,6 +117,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 576px) {
+  main .business-shine__prot {
+    height: 30px;
+  }
+}
+
 @media (max-width: 500px) and (min-width: 300px) {
   .sec-service {
     .justify-between {

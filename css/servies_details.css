@@ -17,69 +17,43 @@ main .servies_details__titles {
   line-height: 30px;
   color: var(--black);
 }
-main .servies_details__selects {
+main .servies_details__tabs {
   width: 100%;
+  padding: 0;
 }
-main .servies_details__select {
+main .servies_details__tab {
   width: 100%;
-  height: 60px;
+  padding: 11px 0 11px 25px;
   margin-top: 15px;
+  font-family: var(--gilroy-medium);
+  font-size: 16px;
+  line-height: 39px;
+  color: #696969;
   background: var(--white);
-  position: relative;
   border: 1px solid #d5d5d5;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  transition: var(--transition-all);
-}
-main .servies_details__select select {
-  width: 100%;
-  height: 100%;
-  padding: 11px 25px;
-  background: transparent;
-  border: none;
-  font-family: var(--gilroy-medium);
-  font-size: 16px;
-  line-height: 39px;
-  color: #696969;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
+  justify-content: space-between;
   cursor: pointer;
   transition: var(--transition-all);
 }
-main .servies_details__select select:focus {
-  outline: none;
-}
-main .servies_details__select select::placeholder {
-  font-family: var(--gilroy-medium);
-  font-size: 16px;
-  line-height: 39px;
-  color: #696969;
-}
-main .servies_details__select span {
+main .servies_details__tab span {
   width: 24px;
   height: 24px;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 4px;
   transform: rotate(0);
   transition: var(--transition-all);
 }
-main .servies_details__select:hover {
+main .servies_details__tab:hover, main .servies_details__tab.active {
   background: #00b027;
-}
-main .servies_details__select:hover select {
   color: var(--white);
 }
-main .servies_details__select:hover select option {
-  padding: 10px 0;
-  color: #696969;
-}
-main .servies_details__select:hover span {
+main .servies_details__tab:hover span, main .servies_details__tab.active span {
   transform: rotate(90deg);
 }
-main .servies_details__select:hover span svg path {
+main .servies_details__tab:hover span svg path, main .servies_details__tab.active span svg path {
   stroke: var(--white);
 }
 main .servies_details__questions {
@@ -198,6 +172,10 @@ main .servies_details__btn:hover {
 }
 main .servies_details__cloumn {
   width: 848px;
+  display: none;
+}
+main .servies_details__cloumn.active {
+  display: block;
 }
 main .servies_details__title {
   margin-top: 56px;
@@ -287,7 +265,7 @@ footer {
   main .servies_details__titles {
     margin-top: 56px !important;
   }
-  main .servies_details__selects {
+  main .servies_details__tabs {
     max-width: 320px;
     width: 100%;
   }
@@ -324,8 +302,18 @@ footer {
   }
 }
 @media screen and (max-width: 576px) {
-  .container {
-    padding: 0 15px;
+  main .servies_details__tab {
+    font-size: 14px;
+    padding: 5px 0 5px 25px;
+  }
+
+  main .servies_details__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  main .servies_details__text {
+    line-height: 25px;
   }
 }
 

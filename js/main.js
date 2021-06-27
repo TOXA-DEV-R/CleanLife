@@ -437,3 +437,29 @@ if (document.querySelector(".sec-project__img")) {
     modalBasicWindow.classList.remove("active");
   });
 }
+
+// services_details tabs
+function tabsFunction() {
+  document.querySelector(".tabs").addEventListener("click", function (e) {
+    document.querySelectorAll(".tab-link").forEach((item, index) => {
+      item.classList.remove("active");
+    });
+
+    if (
+      e.target.classList.contains("tab-link") &&
+      !e.target.classList.contains("active")
+    ) {
+      e.target.classList.add("active");
+
+      const tabContentName = e.target.dataset.content;
+
+      document
+        .querySelector(`.tabs-content-item.active`)
+        .classList.remove("active");
+      const tabContent = document.getElementById(tabContentName);
+
+      tabContent.classList.add("active");
+    }
+  });
+}
+tabsFunction();
