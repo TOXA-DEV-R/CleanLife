@@ -350,15 +350,16 @@ const secondModal = new modalWindows("second-order");
 const thirdModal = new modalWindows("third-order");
 
 // languageBasic
-function languageControl(firstElement, secondElement, name) {
+
+if(document.getElementById('first-lang-basic')){
+  function languageControl(firstElement, secondElement,thirdElement, name) {
   const languageBasic = document.getElementById(firstElement);
   const langContent = document.getElementById(secondElement);
+  const menuBlock = document.getElementById(thirdElement)
 
-  if (languageBasic) {
     languageBasic.addEventListener("click", () => {
       langContent.classList.toggle("lang__content-active");
     });
-  }
 
   window.addEventListener("click", function (e) {
     if (
@@ -369,9 +370,11 @@ function languageControl(firstElement, secondElement, name) {
     }
   });
 }
-languageControl("first-lang-basic", "first-lang__content", "first");
-languageControl("second-lang-basic", "second-lang__content", "second");
-languageControl("third-lang-basic", "third-lang__content", "third");
+languageControl("first-lang-basic", "first-lang__content","first-menu-block", "first");
+languageControl("second-lang-basic", "second-lang__content","second-menu-block", "second");
+languageControl("third-lang-basic", "third-lang__content","first-menu-block", "third");
+}
+
 
 // navbar menu-change__link
 function navbarMenuChange() {

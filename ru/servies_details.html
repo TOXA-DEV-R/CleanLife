@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href=" ../css/about_img.css">
+  <link rel="stylesheet" href="../css/contacts.css">
   <link rel="stylesheet" href="../css/servies_details.css">
   <title>Clean Life</title>
 </head>
@@ -38,7 +39,7 @@
               <li class="menu__item"><a href="/" class="menu__link">Главная</a></li>
               <li class="menu__item"><a href="./about.html" class="menu__link">О нас</a></li>
               <li class="menu__item active">
-                <div class="menu-block">
+                <div class="menu-block" id="first-menu-block">
                   <a href="./services.html" class="menu__link">Услуги</a>
                   <span class="menu-change__link">
                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,14 +74,14 @@
               <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
             </div>
             <div class="lang__card">
-              <span class="lang-basic" id="first-lang-basic">Uz
+              <span class="lang-basic" id="first-lang-basic">Ру
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
               <div class="lang__content" id="first-lang__content">
-                <a href="/" class="lang__link">Ру</a>
-                <a href="/" class="lang__link">Eng</a>
+                
+                <a href="/" class="lang__link">Uz</a>
               </div>
             </div>
             <a href="#!" class="order" id='first-order'>Заказать услуга</a>
@@ -100,7 +101,7 @@
               <li class="menu__item"><a href="/" class="menu__link">Главная</a></li>
               <li class="menu__item"><a href="./about.html" class="menu__link">О Нас</a></li>
               <li class="menu__item active">
-                <div class="menu-block">
+                <div class="menu-block" id="second-menu-block">
                   <a href="./services.html" class="menu__link">Услуги</a>
                   <span class="menu-change__link">
                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,14 +135,14 @@
               <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
             </div>
             <div class="lang__card">
-              <span class="lang-basic" id="second-lang-basic">Uz
+              <span class="lang-basic" id="second-lang-basic">Ру
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
               <div class="lang__content" id="second-lang__content">
-                <a href="/" class="lang__link">Ру</a>
-                <a href="/" class="lang__link">Eng</a>
+                
+                <a href="/" class="lang__link">Uz</a>
               </div>
             </div>
             <a href="#!" class="order" id='second-order'>Заказать услуга</a>
@@ -198,14 +199,14 @@
               <a href="tel:+998993333333"> <span>+998 (99) </span> 333-33-33</a>
             </div>
             <div class="lang__card">
-              <span class="lang-basic" id="third-lang-basic">Uz
+              <span class="lang-basic" id="third-lang-basic">Ру
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
               <div class="lang__content" id="third-lang__content">
-                <a href="/" class="lang__link">Ру</a>
-                <a href="/" class="lang__link">Eng</a>
+                
+                <a href="/" class="lang__link">Uz</a>
               </div>
             </div>
             <a href="#!" class="order" id="third-order">Заказать услуга</a>
@@ -887,16 +888,69 @@
       </div>
     </div>
     <!-- / servies_details -->
-    <!-- sec-order -->
-    <section class="sec-order">
+    <div class="contacts">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="title">Есть вопросы?</h1>
+        <div class="row justify-between">
+          <div class="contacts__our">
+            <h2 class="contacts__titles">
+              Есть вопросы? Свяжитесь с нами
+            </h2>
+            <div class="contacts__address">
+              <div class="contacts__address-info" style="margin-top: 40px;">
+                <span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.8338 9.87002V11.62C12.8345 11.7825 12.8012 11.9433 12.7361 12.0921C12.671 12.241 12.5756 12.3746 12.4559 12.4844C12.3362 12.5943 12.1948 12.6779 12.0409 12.7299C11.887 12.782 11.724 12.8013 11.5622 12.7867C9.76714 12.5916 8.04291 11.9783 6.52799 10.9958C5.11856 10.1002 3.9236 8.90528 3.02799 7.49585C2.04214 5.97405 1.42863 4.24143 1.23716 2.43835C1.22258 2.27704 1.24175 2.11446 1.29345 1.96096C1.34515 1.80747 1.42824 1.66642 1.53744 1.54679C1.64663 1.42717 1.77954 1.3316 1.9277 1.26615C2.07586 1.20071 2.23602 1.16684 2.39799 1.16668H4.14799C4.43109 1.1639 4.70554 1.26415 4.92018 1.44874C5.13483 1.63334 5.27504 1.88969 5.31466 2.17002C5.38852 2.73005 5.5255 3.27994 5.72299 3.80918C5.80147 4.01797 5.81846 4.24488 5.77194 4.46303C5.72541 4.68118 5.61733 4.88141 5.46049 5.04002L4.71966 5.78085C5.55006 7.24125 6.75926 8.45044 8.21966 9.28085L8.96049 8.54002C9.11909 8.38318 9.31933 8.27509 9.53748 8.22857C9.75562 8.18205 9.98253 8.19903 10.1913 8.27752C10.7206 8.475 11.2705 8.61199 11.8305 8.68585C12.1139 8.72582 12.3726 8.86855 12.5576 9.08689C12.7426 9.30522 12.8409 9.58393 12.8338 9.87002Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <p>+998 (99) 333 33 33, +998 (33) 999 99 99</p>
+              </div>
+              <div class="contacts__address-info">
+                <span>
+                  <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 0.5H12.5C13.1875 0.5 13.75 1.0625 13.75 1.75V9.25C13.75 9.9375 13.1875 10.5 12.5 10.5H2.5C1.8125 10.5 1.25 9.9375 1.25 9.25V1.75C1.25 1.0625 1.8125 0.5 2.5 0.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M13.75 1.75L7.5 6.125L1.25 1.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <p>info@cleanlife.uz</p>
+              </div>
+              <div class="contacts__address-info">
+                <span>
+                  <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.125 6.25C12.125 10.625 6.5 14.375 6.5 14.375C6.5 14.375 0.875 10.625 0.875 6.25C0.875 4.75816 1.46763 3.32742 2.52252 2.27252C3.57742 1.21763 5.00816 0.625 6.5 0.625C7.99184 0.625 9.42258 1.21763 10.4775 2.27252C11.5324 3.32742 12.125 4.75816 12.125 6.25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.5 8.125C7.53553 8.125 8.375 7.28553 8.375 6.25C8.375 5.21447 7.53553 4.375 6.5 4.375C5.46447 4.375 4.625 5.21447 4.625 6.25C4.625 7.28553 5.46447 8.125 6.5 8.125Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <p>Город Ташкент, Чиланзарский район, 6 квартал, «Эльдорадо»</p>
+              </div>
+              <div class="contacts__social-networks">
+                <h2>
+                  Социальные сети
+                </h2>
+                <div class="contacts__social__icons">
+                  <a href="#" class="contacts__social__link">
+                    <i class="ic ic_facebook"></i>
+                  </a>
+                  <a href="#" class="contacts__social__link">
+                    <i class="ic ic_instagram"></i>
+                  </a>
+                  <a href="#" class="contacts__social__link">
+                    <i class="ic ic_whatsapp"></i>
+                  </a>
+                  <a href="#" class="contacts__social__link">
+                    <i class="ic ic_youtube"></i>
+                  </a>
+                  <a href="#" class="contacts__social__link">
+                    <i class="ic ic_telegram"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row justify-between align-center">
-          <form class="sec-order__contact">
+          <form class="row contacts__form ">
+            <h2 class="contacts__titles">
+              Oставить заявку
+            </h2>
             <input type="text" class="name" name="name" placeholder="Имя *">
             <input type="text" class="number" name="number" placeholder="Телефон *">
             <div class="selected">
@@ -908,23 +962,17 @@
                 <option value="dry-cleaning">Химчистка</option>
               </select>
               <span>
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.75 5.625L7.5 9.375L11.25 5.625" stroke="#B0B0B0" stroke-linecap="round"
-                    stroke-linejoin="round"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18L15 12L9 6" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
-
               </span>
             </div>
             <textarea name="textarea" class="textarea" placeholder="Текстовое сообщение"></textarea>
             <button type="submit" class="btn-submit">Отправить сообщение</button>
           </form>
-          <div class="sec-order__img">
-            <img src="../images/welcome-sign_img.png" alt="Admin_img">
-          </div>
         </div>
       </div>
-    </section>
-    <!-- / sec-order -->
+    </div>
   </main>
   <!-- / main -->
   <div class="modal" id="modal">

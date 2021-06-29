@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
 }
 
+main{
+  overflow: hidden;
+}
+
 .title {
   font-family: $gilroy-bold;
   font-weight: bold;
