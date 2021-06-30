@@ -577,8 +577,12 @@ header {
           font-size: 16px;
           line-height: 24px;
           color: #696969; }
-    header .category #category-slider-ow {
+    header .category .container .tns-outer > button {
       display: none !important; }
+    header .category .container .tns-outer .tns-controls {
+      display: none !important; }
+    header .category-col {
+      width: 793px; }
   header .navbar-fixed {
     display: none;
     position: fixed !important;

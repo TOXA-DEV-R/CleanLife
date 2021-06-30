@@ -168,7 +168,6 @@ header {
           margin-left: 7px;
         }
       }
-
       .lang__content {
         width: 68px;
         display: none;
@@ -321,8 +320,18 @@ header {
         }
       }
     }
-    #category-slider-ow {
-      display: none !important;
+    .container{
+      .tns-outer{
+        > button{
+          display: none !important;
+        }
+        .tns-controls{
+          display: none !important;
+        }
+      }
+    }
+    &-col{
+      width: 793px;
     }
   }
   .navbar-fixed {
